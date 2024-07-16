@@ -59,7 +59,7 @@ if (isset($_POST['Submit'])) {
                     <div class="col-lg-10 col-xl-9 mx-auto">
                         <div class="row mt-5">
                             <?php
-                            // if any errors are there display them
+                            // if any errors are there we can display them
                             if (count($errors) > 0) {
                                 ?>
                                 <div class="col-md-12 col-sm-12 col-xs-12">
