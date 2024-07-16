@@ -49,7 +49,7 @@ if (isset($_SESSION['userId'])) {
         $image = $row['imgUrl'];
         $notification = $row['receive_notification'];
         $birthday = new DateTime($row["birthDate"]);
-        $today = new Datetime(date('y-d-m'));
+        $today = new Datetime('now');
         $diff = $today->diff($birthday);
 
     }
