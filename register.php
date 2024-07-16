@@ -45,7 +45,7 @@ if (isset($_POST['Submit'])) {
                     move_uploaded_file($file_tmp, $imageURL);
                     $image_uploaded = true;
                     try {
-                        $insertQueryForRegister = "INSERT INTO datingdb.profile(email,password,firstName,lastName,city,birthDate,gender,imgUrl,user_role) values('$email','$password','$firstName','$lastName','$city','$dateOfBirth','$gender','$imageURL','regular')";
+                        $insertQueryForRegister = "INSERT INTO datingdb.profile(email,password,firstName,lastName,city,birthDate,gender,imgUrl,user_role) values('$email','$password','$firstName','$lastName','$city','$dateOfBirth','$gender','$imageURL','premium')";
                         $insertQueryForRegisterstmt = $connection->prepare($insertQueryForRegister);
                         $insertQueryForRegisterstmt->execute();
                         $registerSuccessfully = true;

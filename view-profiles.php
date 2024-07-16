@@ -128,7 +128,7 @@ if (isset($_GET["sendWinkTo"])) {
         }
 
         $insertMessageQuery = "INSERT INTO messages(msg_from_user_id,msg,msg_to_user_id,msg_date,is_msg_read) 
-                               values(:userId,'😉',:sendWinkToId,NOW(),0)";
+                               values(:userId,'Liked your profile',:sendWinkToId,NOW(),0)";
         $insertStmt = $connection->prepare($insertMessageQuery);
         $insertStmt->bindParam(':userId', $userId);
         $insertStmt->bindParam(':sendWinkToId', $sendWinkToId);
@@ -184,7 +184,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
         <div class="row mt-10 mb-10">
             <div class="col-md-12">
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    Wink (😉) sent to user successfully! Click <strong><a
+                    Like sent to user successfully! Click <strong><a
                                 href="./chat-users.php?id=<?= $_GET["sendWinkTo"] ?>">here</a></strong> to start
                     chatting.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -305,7 +305,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
             </div>
         </div>
 
-        <?php
+       <!-- <?php
         if (!empty($userObj)) {
             if ($userObj["user_role"] === "regular") {
                 ?>
@@ -319,7 +319,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
             }
         }
         ?>
-
+-->
 
         <?php
         if (count($profileList) > 0) {
@@ -376,7 +376,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                                     <div class="col-md-6 col-sm-12">
                                         <button class="btn btn-info w-100" data-toggle="modal"
                                                 data-target="#loginModal">
-                                            Send wink
+                                            Like
                                         </button>
                                     </div>
                                     <div class="col-md-6 col-sm-12">
@@ -401,7 +401,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                                 <div class="row">
                                     <div class="col-md-6 col-sm-12">
                                         <a href="./view-profiles.php?sendWinkTo=<?= $profile["id"] ?>"
-                                           name="SendWink" class="btn btn-info w-100">Send wink</a>
+                                           name="SendWink" class="btn btn-info w-100">Like</a>
 
                                     </div>
                                     <div class="col-md-6 col-sm-12">
