@@ -6,6 +6,7 @@ $connection = getConnection();
 $userId = isset($_SESSION["userId"]) && !empty($_SESSION["userId"]) ? $_SESSION["userId"] : 0;
 if ($userId !== 0) {
     header("Location: ./index.php");
+    exit(); // Add exit() to stop executing the script
 }
 $errors = array();
 if (isset($_POST['Submit'])) {
@@ -14,23 +15,22 @@ if (isset($_POST['Submit'])) {
 
     if (!IsVariableIsSetOrEmpty($email) && !IsVariableIsSetOrEmpty($password)) {
         if (empty($errors) == true) {
-            $query = "SELECT * from profile WHERE email = '$email' && password = '$password'";
+            $query = "SELECT * from profile WHERE email = :email && password = :password";
             $stmt = $connection->prepare($query);
-            $stmt->bindParam('username', $username, PDO::PARAM_STR);
-            $stmt->bindValue('password', $password, PDO::PARAM_STR);
+            $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+            $stmt->bindParam(':password', $password, PDO::PARAM_STR);
             $stmt->execute();
             $count = $stmt->rowCount();
             $row   = $stmt->fetch(PDO::FETCH_ASSOC);
 
-           if($count === 0 || $row <= 2 ){
-               array_push($errors, 'Incorrect Username / Password');
-           }else{
+            if($count === 0) {
+                array_push($errors, 'Incorrect Username / Password');
+            }else{
                 $_SESSION['userId'] = $row['id'];
                 $_SESSION['user'] = $row;
-               if (isset($_SESSION['userId'])) {
-                   header("Location: index.php");
-               }
-           }
+                header("Location: index.php");
+                exit(); // Add exit() to stop executing the script
+            }
         }
     }
 }
@@ -80,9 +80,9 @@ if (isset($_POST['Submit'])) {
 
                         <div class="card-body">
                             <h5 class="card-title text-center">Login</h5>
-                            <form class="form-signin" action="login.php" method="post" enctype="multipart/form-data">
+                            <form class="form-signin" action="login.php" method="post">
                                 <div class="form-label-group">
-                                    <input type="text" id="inputUserame" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" class="form-control" placeholder="Username" required autofocus>
+                                    <input type="email" id="inputUserame" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" class="form-control" placeholder="Username" required autofocus>
                                     <label for="inputUserame">Username</label>
                                 </div>
                                <hr>
