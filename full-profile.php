@@ -97,8 +97,6 @@ if ($result->num_rows > 0) {
             <p class="profile-field"><strong>Birth Date:</strong> <?php echo $user['birthDate']; ?></p>
             <p class="profile-field"><strong>Gender:</strong> <?php echo $user['gender']; ?></p>
             <!--<p class="profile-field"><strong>Image URL:</strong> <?php echo $user['imgUrl']; ?></p>
-            <p class="profile-field"><strong>Receive Notifications:</strong> <?php echo ($user['receive_notification'] == 1) ? 'Yes' : 'No'; ?></p>
-            <p class="profile-field"><strong>User Role:</strong> <?php echo $user['user_role']; ?></p>-->
             <p class="profile-field"><strong>Created Date:</strong> <?php echo $user['created_date']; ?></p>
         </div>
     </div>
