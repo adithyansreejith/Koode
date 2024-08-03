@@ -139,7 +139,7 @@ WHERE (msg_from_user_id =:userId and msg_to_user_id=:sentToUserID) or (msg_from_
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php include("./includes/header.php") ?>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css"
-          rel="stylesheet"
+          rel="stylesheet">
 
     <link href="./css/style.css" rel="stylesheet" type="text/css">
 
@@ -148,6 +148,7 @@ WHERE (msg_from_user_id =:userId and msg_to_user_id=:sentToUserID) or (msg_from_
         .container {
             max-width: 1170px;
             margin: auto;
+            border-radius: 10px;
         }
 
         img {

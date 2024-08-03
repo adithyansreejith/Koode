@@ -6,6 +6,9 @@ if (isset($_SESSION["userId"])) {
     $userId = !IsVariableIsSetOrEmpty($_SESSION['userId']) ? $_SESSION['userId'] : 0;
     $user = $userId !== 0 && !IsVariableIsSetOrEmpty($_SESSION['user']) ? $_SESSION['user'] : [];
 }
+
+//just testing 
+
 ?>
 <header>
     <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
