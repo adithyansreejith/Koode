@@ -44,6 +44,8 @@
 }
 
 img {
+  
+  width: 200px;height: 200px;
   border-radius: 50%;
   border: 10px solid grey;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -87,7 +89,7 @@ if ($result->num_rows > 0) {
     <div class="profile-container">
         <h1 class="profile-header"><?php echo $user['firstName']; ?></h1>
         <div class="profile-info">
-            <img src="<?php echo $user['imgUrl']; ?>" alt="Profile Pic">
+            <img src="<?php echo $user['imgUrl']; ?>" alt="Profile Pic" onerror="this.src='images/alt.png';">
             <p class="profile-field"><strong>First Name:</strong> <?php echo $user['firstName']; ?></p>
             <p class="profile-field"><strong>Last Name:</strong> <?php echo $user['lastName']; ?></p>
             <p class="profile-field"><strong>City:</strong> <?php echo $user['city']; ?></p>
