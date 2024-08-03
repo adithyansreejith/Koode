@@ -380,7 +380,7 @@ WHERE (msg_from_user_id =:userId and msg_to_user_id=:sentToUserID) or (msg_from_
     </style>
 </head>
 <body>
-<div class="container-fluid wrapper">
+<div>
     <?php
     include("./includes/nav-bar.php")
     ?>

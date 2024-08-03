@@ -21,6 +21,10 @@ if (isset($_POST['Submit'])) {
     $city = $_POST['city'];
     $dateOfBirth = $_POST["birthDate"];
     $gender = $_POST["gender"];
+    $hobby = $_POST["hobby"];
+    $Job = $_POST["Job"];
+    
+    
 
     if($password === $confirmpassword) {
 
@@ -74,7 +78,7 @@ if (isset($_POST['Submit'])) {
     <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="container-fluid wrapper">
+<div>
     <?php
     include("./includes/nav-bar.php")
     ?>
@@ -152,13 +156,25 @@ if (isset($_POST['Submit'])) {
                                 <label for="inputCity">City</label>
                             </div>
                             <div class="form-label-group">
+                                <input type="text" name="hobby" id="Hobby" class="form-control"
+                                       placeholder="Hobbies">
+                                <label for="inputHobby">Hobbies</label>
+                            </div>
+                            <div class="form-label-group">
+                                <input type="text" name="Job" id="Job" class="form-control"
+                                       placeholder="Job" required>
+                                <label for="inputJob">Occupation</label>
+                            </div>
+                            <div class="form-label-group">
                                 <input type="date" id="birthDate" name="birthDate" class="form-control" required>
                                 <label for="birthDate">Birth Date</label>
                             </div>
+                            
 
                             <div class="form-group">
 
                                 <div class="form-check form-check-inline">
+                                    Gender:&nbsp;
                                     <input class="form-check-input" type="radio" name="gender" id="gender"
                                            value="male" checked required>
                                     <label class="form-check-label" for="male">Male</label>
@@ -168,6 +184,38 @@ if (isset($_POST['Submit'])) {
                                            value="female" required>
                                     <label class="form-check-label" for="female">Female</label>
                                 </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="gender"
+                                           value="female" required>
+                                    <label class="form-check-label" for="other">Other</label>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+
+                                <div class="form-check form-check-inline">
+                                    Are you disabled?&nbsp;
+                                    <input class="form-check-input" type="radio" name="Disabled_stats" id="Yes"
+                                           value="Y" checked required>
+                                    <label class="form-check-label" for="Yes">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="Disabled_stats" id="No"
+                                           value="N" required>
+                                    <label class="form-check-label" for="female">No</label>
+                                </div>
+                    
+                            </div>
+                            <hr>
+                            <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                If Yes, Choose Which
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Deaf</a>
+                                <a class="dropdown-item" href="#">Locomotive</a>
+                                <a class="dropdown-item" href="#">Mute</a>
+                            </div>
                             </div>
                             <hr>
                             <div class="input-group mb-3">

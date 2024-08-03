@@ -48,7 +48,7 @@ if (isset($_POST['Submit'])) {
     <link href="./css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="container-fluid wrapper">
+<div>
     <?php
     include("./includes/nav-bar.php")
     ?>

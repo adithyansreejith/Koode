@@ -184,7 +184,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
     </style>
 </head>
 <body>
-<div class="container-fluid wrapper">
+<div>
     <?php
     include("./includes/nav-bar.php")
     ?>

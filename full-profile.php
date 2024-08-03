@@ -69,7 +69,7 @@ img {
 
     </head>
 <body>
-<div class="container-fluid wrapper">
+<div>
     <?php
     include("./includes/nav-bar.php")
     ?>
