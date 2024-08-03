@@ -11,7 +11,7 @@ if (isset($_SESSION["userId"])) {
     <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
         <a class="navbar-brand" href="./index.php">
             <!--        <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/logo_white.png" width="30" height="30" alt="logo">-->
-            KOODE <span class="text-warning ">With You</span>
+            KOODE <span class="text-warning">With You</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-2"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,8 +23,7 @@ if (isset($_SESSION["userId"])) {
                 if ($userId !== 0 && count($user) > 0) {
                     ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"
-                           onclick="return false">Hello <?= $user["firstName"] . " " . $user["lastName"] ?>!</a>
+                        <a class="nav-link" href="./full-profile.php?id=<?= $userId?>" style="color: rgb(255, 191, 0);" onclick="return true">Hello <?= $user["firstName"] . " " . $user["lastName"] ?>!</a>
                     </li>
                     <?php
                 }
@@ -41,11 +40,15 @@ if (isset($_SESSION["userId"])) {
                         <a class="nav-link" href="./edit-profile.php">Edit Profile</a>
                     </li>
                     <li class="nav-item">
+                    <a class="nav-link" href="./view-profiles.php">View Profiles</a>
+                    </li>
+                    <li class="nav-item">
                             <a class="nav-link" href="./favourite_list.php">Favourite List</a>
                         </li>
-                        <li class="nav-item">
-                    <a class="nav-link" href="./view-profiles.php">View Profiles</a>
-                </li>
+                     <li class="nav-item">
+                            <a class="nav-link" href="./chat-users.php?id=<?= $userId ?>">Inbox</a>
+                        </li>
+                        
                     <li class="nav-item">
                         <a class="nav-link" href="./logout.php">Logout</a>
                     </li>
