@@ -171,6 +171,17 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
     <?php include("./includes/header.php") ?>
     <link href="./css/style.css" rel="stylesheet" type="text/css">
     <title>View Profiles</title>
+    <style>
+        .card-img-top {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 10px solid #FFBF00;
+}
+    </style>
 </head>
 <body>
 <div class="container-fluid wrapper">
@@ -333,7 +344,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                 <div class="col-md-3">
                     <div class="card card-container">
                     <a href="./full-profile.php?id=<?= $profile["id"] ?>"
-                    name="ViewProf" class="btn btn-info w-100">
+                    name="ViewProf">
                         <img class="card-img-top"
                              src="<?= $profile["imgUrl"] ?>"
                              alt="profile image">
