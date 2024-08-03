@@ -332,9 +332,12 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                 ?>
                 <div class="col-md-3">
                     <div class="card card-container">
+                    <a href="./full-profile.php?id=<?= $profile["id"] ?>"
+                    name="ViewProf" class="btn btn-info w-100">
                         <img class="card-img-top"
                              src="<?= $profile["imgUrl"] ?>"
                              alt="profile image">
+                             </a>
                         <div class="card-body">
                             <h5 class="card-title">Name: <?= $profile["firstName"] . ' ' . $profile['lastName'] ?></h5>
                             <p class="card-text bio-desc-container"><?= $profile["bio"] ?></p>
@@ -407,11 +410,8 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                                            name="SendWink" class="btn btn-info w-100">Like</a>
 
                                     </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <a href="./full-profile.php?id=<?= $profile["id"] ?>"
-                                           name="ViewProf" class="btn btn-info w-100">View</a>
-                                    </div>
-                                    <br>
+                                    
+                                    
                                     <div class="col-md-6 col-sm-12">
                                         <?php
                                         if ($userObj["user_role"] === "regular") {
