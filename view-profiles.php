@@ -409,8 +409,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                                     </div>
                                     <div class="col-md-6 col-sm-12">
                                         <a href="./full-profile.php?id=<?= $profile["id"] ?>"
-                                           name="SendWink" class="btn btn-info w-100">View</a>
-
+                                           name="ViewProf" class="btn btn-info w-100">View</a>
                                     </div>
                                     <br>
                                     <div class="col-md-6 col-sm-12">

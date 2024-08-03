@@ -15,6 +15,7 @@ if (isset($_SESSION['userId'])) {
     $userId = $_SESSION['userId'];
     $users = $_SESSION['user'];
     $queryForSelectProfile = "SELECT ufl.id as favouriteId
+                           ,ufl.user_id_favourited as UsrId
                            ,firstName
                            ,lastName
                            ,dateCreated 
@@ -28,6 +29,7 @@ if (isset($_SESSION['userId'])) {
 
 
     $queryForSelect = "SELECT ufl.id as favouriteId
+                       ,ufl.user_id_favourited as UsrId
                        ,firstName
                        ,lastName
                        ,dateCreated 
@@ -100,6 +102,7 @@ if (isset($_SESSION['userId'])) {
             <th scope="col">LastName</th>
             <th scope="col">Favourited On</th>
             <th scope="col">Action</th>
+            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
@@ -110,7 +113,9 @@ if (isset($_SESSION['userId'])) {
                 <td><?php echo $item['firstName']; ?></td>
                 <td><?php echo $item['lastName']; ?></td>
                 <td><?php echo $item['dateCreated']; ?></td>
-                <td><a href="./favourite_list.php?id=<?php echo $item['favouriteId']; ?>"
+                <td><a href="./full-profile.php?id=<?= $item["UsrId"] ?>"
+               name="ViewProf" class="btn btn-info w-100">View</a></td>
+                       <td><a href="./favourite_list.php?id=<?php echo $item['favouriteId']; ?>"
                        class="btn btn-danger">Remove</a></td>
             </tr>
         <?php }

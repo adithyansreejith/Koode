@@ -20,6 +20,7 @@
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .profile-header {
@@ -44,6 +45,8 @@
 
 img {
   border-radius: 50%;
+  border: 10px solid grey;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .profile-container{
