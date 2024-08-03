@@ -108,17 +108,7 @@ if ($result->num_rows > 0) {
                                         </a>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-                                        <a href="./view-profiles.php?sendWinkTo=<?= $user_id ?>"
-                                           name="SendWink" class="btn btn-info w-100">Like</a>
-
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <a href="./full-profile.php?id=<?= $user_id ?>"
-                                           name="ViewProf" class="btn btn-info w-100">View</a>
-                                    </div>
-            
+                                
         </div>
     </div>
 
