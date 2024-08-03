@@ -340,6 +340,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                             <p class="card-text bio-desc-container"><?= $profile["bio"] ?></p>
                         </div>
                         <ul class="list-group list-group-flush">
+                        <li class="list-group-item">DoB: <?= $profile["birthDate"] ?></li>
                             <li class="list-group-item">Age: <?php
                                 try {
                                     $birthDay = new DateTime($profile["birthDate"]);
@@ -356,6 +357,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                                     <?= $profile["gender"] ?>
                                 </span>
                             </li>
+                            
                             <!--                            <li class="list-group-item">Likes: ABCD, EFGH, IJKL</li>-->
                             <!--                            <li class="list-group-item">Interested in: Female</li>-->
                             <!--                            <li class="list-group-item">Looking for : Longterm Relation, Short term</li>-->
@@ -373,6 +375,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                                     </div>
                                 </div>
                                 <div class="row">
+                                    
                                     <div class="col-md-6 col-sm-12">
                                         <button class="btn btn-info w-100" data-toggle="modal"
                                                 data-target="#loginModal">
@@ -404,6 +407,12 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                                            name="SendWink" class="btn btn-info w-100">Like</a>
 
                                     </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <a href="./full-profile.php?id=<?= $profile["id"] ?>"
+                                           name="SendWink" class="btn btn-info w-100">View</a>
+
+                                    </div>
+                                    <br>
                                     <div class="col-md-6 col-sm-12">
                                         <?php
                                         if ($userObj["user_role"] === "regular") {

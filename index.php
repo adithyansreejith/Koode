@@ -13,6 +13,7 @@ session_start();
     <link href="./css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    
 <div class="container-fluid wrapper">
     <?php
     include("./includes/nav-bar.php")

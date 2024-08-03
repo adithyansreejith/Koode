@@ -33,24 +33,19 @@ if (isset($_SESSION["userId"])) {
                 <li class="nav-item">
                     <a class="nav-link" href="./index.php">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./view-profiles.php">View Profiles</a>
-                </li>
+                
                 <?php
                 if ($userId !== 0) {
                     ?>
                     <li class="nav-item">
                         <a class="nav-link" href="./edit-profile.php">Edit Profile</a>
                     </li>
-                    <?php
-                    if ($user["user_role"] === "premium") {
-                        ?>
-                        <li class="nav-item">
+                    <li class="nav-item">
                             <a class="nav-link" href="./favourite_list.php">Favourite List</a>
                         </li>
-                        <?php
-                    }
-                    ?>
+                        <li class="nav-item">
+                    <a class="nav-link" href="./view-profiles.php">View Profiles</a>
+                </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./logout.php">Logout</a>
                     </li>

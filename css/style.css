@@ -1,6 +1,11 @@
 /*.wrapper {*/
 /*    padding: 0;*/
 /*}*/
+/* Light Red Gradient Background */
+.light-red-gradient-background {
+    background: linear-gradient(to right, #ffcccc, #ff9999);
+}
+
 
 .sec-features {
     width: 100%;
@@ -95,6 +100,7 @@
 
 .card-signin .card-body {
     padding: 2rem;
+    border-radius: 50px;
 }
 
 .form-signin {
@@ -262,3 +268,4 @@
     width: 100%; /* Full width */
     padding: 20px; /* Some padding */
 }
+

@@ -2,7 +2,7 @@
 //it allows any type of database.
 
 define("serverName", "localhost");
-define("database", "koode");
+define("database", "datingdb");
 define("username", "root");
 define("password", "");
 define("connectionString", "mysql:host=" . serverName . ";dbname=" . database);

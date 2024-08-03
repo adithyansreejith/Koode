@@ -37,30 +37,11 @@ if (isset($_SESSION["userId"])) {
                         ?>
 
                     </p>
-                    <p class="text-light py-4 mb-4">&copy;<?php echo date("Y"); ?> ONLINE DATING</p>
+                    <p class="text-light py-4 mb-4">&copy;<?php echo date("Y"); ?> ADITHYAN AND BHAVANA</p>
                 </div>
             </div>
 
-           <!-- <div class="col-md-4 text-white text-center text-md-left ">
-                <div class="py-2 my-4">
-                    <div>
-                        <p class="text-white"><i class="fa fa-map-marker mx-2 "></i>
-                            2100 Boulevard de Maisonneuve East,
-                            Montréal,
-                            Quebec -H2K 4S1</p>
-                    </div>
-
-                    <div>
-                        <p><i class="fa fa-phone  mx-2 "></i>+1 (514)-123-4567</p>
-                    </div>
-                    <div>
-                        <p><i class="fa fa-envelope  mx-2"></i><a href="mailto:support@onlinedating.com">koodesupport@gmail.com</a>
-                        </p>
-                    </div>
-                </div>
-            </div>-->
-
-            <div class="col-md-4 text-white my-4 text-center text-md-left ">
+ <div class="col-md-4 text-white my-4 text-center text-md-left ">
                 <span class=" font-weight-bold ">About Us</span>
                 <p class="text-warning my-2">We started this as our 5th sem mini project</p>
             </div>
