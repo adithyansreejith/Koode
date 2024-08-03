@@ -1,33 +1,8 @@
 
 ### Installation
-
-  - To run the project, clone it on your computer using the following command or download the project as zip directly.
-  	
-	`git clone https://github.com/vatsal121/datingSitePHP.git`
-  
   - To add the database, Import the "datingDB.sql" file which contains pre-entered data and test users from the root of the project directory into your phpMyAdmin or MySQL Workbench.
   - Set up your Database credentials in the database file located at "./Connector/DbConnectorPDO.php".
-  - Run the project from your favourite IDE or put it in the "WWW" folder of WAMP or XAMPP. 
-
-                    
-### Test Credentials
-
-Email  | Password | UserRole 
-------------- | ------------- | -------------
-meet@gmail.com  | test | premium user
-vatsal@gmail.com  | test | premium user
-justin@gmail.com  | test | regular user
-janki@gmail.com  | test | regular user
-mariadb@gmail.com  | test | regular user
-angelpriya@gmail.com  | test | regular user
-testing@gmail.com | test | premium user
-
-### Helper Functions
-
-- Helper Functions are located in "./helper/helperFunctions.php
-- Helper functions contains some common functions which are used globally in the site to improve code readability.
-- Example: IsVariableIsSetOrEmpty($variableName) : Checks if variable is set and not empty. Returns TRUE or FALSE.
-
+  - Run the project from your favourite IDE or put it in the "WWW" folder.
 
 ### Features
 
@@ -59,14 +34,9 @@ testing@gmail.com | test | premium user
 		  Email-Id : testing@gmail.com
 		  Password: test 
 
-- Become Premium Member Page:
-	- 1) User should add his/her card detail to pay the membership fee
-	-  2) Once validated user will become premium user
-
 - Chat User Page : 
 	- 1) Logged in user can chat to other users. 
-	- 2) If user has a premium membership then user can see whether other user has read the messasge or not
-	- 3) Winks sent from the profile page will be also sent into the chat directly.
+	- 2)  Winks sent from the profile page will be also sent into the chat directly.
 
 - View-Profile : 
 	- 1) In this page user can search the another user with First Name, City , Age and Gender.
