@@ -179,7 +179,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
 .card-img-top:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border: 10px solid #FFBF00;
+  
 }
     </style>
 </head>
@@ -240,7 +240,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                 <h2>Search Profiles</h2>
             </div>
         </div>
-        <div class="row mb-10">
+        <div class="row mb-10" >
             <div class="col-md-12">
                 <form method="post" action="view-profiles.php">
                     <div class="form-row mb-10">
@@ -248,14 +248,14 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                             <div class="form-group">
                                 <label for="firsName">Search by first name</label>
                                 <input name="firstName" id="firstName" type="text" class="form-control"
-                                       placeholder="First name" value="<?= $firstName ?>">
+                                       placeholder="First name" value="<?= $firstName ?>" style="border-radius: 20px; overflow: hidden;">
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="lastName">Search by city</label>
                                 <input name="city" id="city" type="text" class="form-control"
-                                       placeholder="City" value="<?= $city ?>">
+                                       placeholder="City" value="<?= $city ?>" style="border-radius: 20px; overflow: hidden;">
                             </div>
                         </div>
                     </div>
@@ -263,7 +263,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                         <div class="col">
                             <div class="form-group">
                                 <label for="gender">Search by gender</label>
-                                <select id="gender" class="form-control" name="gender">
+                                <select id="gender" class="form-control" name="gender" style="border-radius: 20px; overflow: hidden;">
                                     <option value="" <?php if (empty($gender)) {
                                         echo "selected";
                                     } ?>>-- Select gender
@@ -306,15 +306,20 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                     </div>
                     <div class="form-row">
                         <div class="col-md-10 col-sm-12">
-                            <input type="submit" name="Search" value="Search" class="btn btn-dark w-100"/>
+                            <input type="submit" name="Search" value="Search" class="btn btn-dark w-100" style="border-radius: 15px; overflow: hidden;">
                         </div>
                         <div class="col-md-2 col-sm-12">
-                            <input type="submit" name="Reset" value="Reset filters" class="btn btn-info w-100"/>
+                            <input type="submit" name="Reset" value="Reset filters" class="btn btn-info w-100" style="border-radius: 20px; overflow: hidden;">
                         </div>
                     </div>
                 </form>
             </div>
         </div>
+        <hr>
+        <div style="text-align:center;">
+            <i>Click on the image for more details!</i>
+        </div>
+        <hr>
 
        <!-- <?php
         if (!empty($userObj)) {
@@ -341,8 +346,8 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                     echo '<div class="row mb-10">';
                 }
                 ?>
-                <div class="col-md-3">
-                    <div class="card card-container">
+                <div class="col-md-3" >
+                    <div class="card card-container" style="border-radius: 20px; overflow: hidden;">
                     <a href="./full-profile.php?id=<?= $profile["id"] ?>"
                     name="ViewProf">
                         <img class="card-img-top"
@@ -383,7 +388,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                                 <div class="row mb-10">
                                     <div class="col-md-12 col-sm-12">
                                         <button class="btn btn-success w-100" data-toggle="modal"
-                                                data-target="#loginModal">
+                                                data-target="#loginModal" style="border-radius: 25px; overflow: hidden;">
                                             Send Message
                                         </button>
                                     </div>
@@ -392,13 +397,13 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                                     
                                     <div class="col-md-6 col-sm-12">
                                         <button class="btn btn-info w-100" data-toggle="modal"
-                                                data-target="#loginModal">
+                                                data-target="#loginModal" style="border-radius: 25px; overflow: hidden;">
                                             Like
                                         </button>
                                     </div>
                                     <div class="col-md-6 col-sm-12">
                                         <button class="btn btn-danger w-100" data-toggle="modal"
-                                                data-target="#loginModal">
+                                                data-target="#loginModal" style="border-radius: 25px; overflow: hidden;">
                                             Favourite
                                         </button>
                                     </div>
@@ -410,7 +415,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                                 <div class="row mb-10">
                                     <div class="col-md-12 col-sm-12">
                                         <a href="./chat-users.php?id=<?= $profile["id"] ?>"
-                                           class="btn btn-success w-100">
+                                           class="btn btn-success w-100" style="border-radius: 25px; overflow: hidden;">
                                             Send Message
                                         </a>
                                     </div>
@@ -418,7 +423,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                                 <div class="row">
                                     <div class="col-md-6 col-sm-12">
                                         <a href="./view-profiles.php?sendWinkTo=<?= $profile["id"] ?>"
-                                           name="SendWink" class="btn btn-info w-100">Like</a>
+                                           name="SendWink" class="btn btn-info w-100" style="border-radius: 25px; overflow: hidden;">Like</a>
 
                                     </div>
                                     
@@ -428,7 +433,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                                         if ($userObj["user_role"] === "regular") {
                                             ?>
                                             <button class="btn btn-danger w-100" data-toggle="modal"
-                                                    data-target="#addToFavouriteModal">
+                                                    data-target="#addToFavouriteModal" style="border-radius: 25px; overflow: hidden;">
                                                 Favourite
                                             </button>
 
@@ -436,7 +441,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                                         } else {
                                             ?>
                                             <a class="btn btn-danger w-100"
-                                               href="./view-profiles.php?addToFavouriteId=<?= $profile["id"] ?>">
+                                               href="./view-profiles.php?addToFavouriteId=<?= $profile["id"] ?>" style="border-radius: 25px; overflow: hidden;">
                                                 Favourite
                                             </a>
                                             <?php
@@ -459,7 +464,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
             ?>
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="alert alert-info text-center" role="alert">
+                    <div class="alert alert-info text-center" role="alert" style="border-radius: 25px; overflow: hidden;">
                         <?php
                         if ($userId !== 0) {
                             ?>
@@ -479,7 +484,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
 
     </div>
 
-    <!-- Modal -->
+    <!-- Modal
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -533,7 +538,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <script>
         $(document).ready(function () {

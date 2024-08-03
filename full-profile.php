@@ -97,7 +97,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $user = $result->fetch_assoc();
     ?>
-    <div class="profile-container">
+    <div class="profile-container" style="border-radius: 20px; overflow: hidden;">
         <h1 class="profile-header"><?php echo $user['firstName']; ?></h1>
         <div class="profile-info">
         <a href="<?php echo $user['imgUrl']; ?>" alt="Profile Pic" onerror="this.src='images/alt.png';" target="_blank"><!--to open in another window -->
@@ -114,9 +114,9 @@ if ($result->num_rows > 0) {
         </div>
         <div>
         <div class="row mb-10">
-                                    <div class="col-md-12 col-sm-12">
+                                    <div class="col-md-12 col-sm-12" style="border-radius: 20px; overflow: hidden;">
                                         <a href="./chat-users.php?id=<?= $user_id ?>"
-                                           class="btn btn-success w-100">
+                                           class="btn btn-success w-100" style="border-radius: 30px; overflow: hidden;">
                                             Send Message
                                         </a>
                                     </div>
