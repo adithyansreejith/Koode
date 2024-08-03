@@ -159,10 +159,10 @@ session_start();
                                     <div class="col-md-6">
                                         <blockquote class="blockquote">
                                             <small>
-                                                We found this site to help young and elder people to find their exact
+                                                We found this site to help people to find their exact
                                                 match to date and fill their life with joy!
                                             </small>
-                                            <footer class="blockquote-footer mt-2">Vatsal and Meet, CEO</footer>
+                                            <footer class="blockquote-footer mt-2">Adithyan & Bhavana</footer>
                                         </blockquote>
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@ session_start();
                                         <blockquote class="blockquote">
                                             <small>I've been a member for over 3 years. This is by far the best
                                                 site.</small>
-                                            <footer class="blockquote-footer mt-2">Angel Priya</footer>
+                                            <footer class="blockquote-footer mt-2">Angel</footer>
                                         </blockquote>
                                     </div>
                                 </div>
@@ -185,9 +185,8 @@ session_start();
                                     <div class="col-md-6">
                                         <blockquote class="blockquote">
                                             <small>I joined since its opening and I couldn't have found a better dating
-                                                space. Being a member is so inspiring and I love to date with young
-                                                bright and full of entrepreneurs like me!</small>
-                                            <footer class="blockquote-footer mt-2">Maria DB</footer>
+                                                space. Being a member is so inspiring and I love to date individuals like me!</small>
+                                            <footer class="blockquote-footer mt-2">Eldhose</footer>
                                         </blockquote>
                                     </div>
                                 </div>
@@ -217,7 +216,7 @@ session_start();
                         <div class="col-md-10 col-lg-7">
                             <h1 class="h4">Have a question? Get in touch with us!</h1>
 
-                            <form action="" method="post">
+                            <form action="support.php" method="post">
                                 <fieldset class="form-group">
                                     <label for="formName">Your Name:</label>
                                     <input id="formName" class="form-control" type="text" placeholder="Your Name"
