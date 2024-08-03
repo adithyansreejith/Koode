@@ -97,17 +97,38 @@ if ($result->num_rows > 0) {
             <p class="profile-field"><strong>Birth Date:</strong> <?php echo $user['birthDate']; ?></p>
             <p class="profile-field"><strong>Gender:</strong> <?php echo $user['gender']; ?></p>
             <!--<p class="profile-field"><strong>Image URL:</strong> <?php echo $user['imgUrl']; ?></p>
-            <p class="profile-field"><strong>Created Date:</strong> <?php echo $user['created_date']; ?></p>
+            <p class="profile-field"><strong>Created Date:</strong> <?php echo $user['created_date']; ?></p>-->
+        </div>
+        <div>
+        <div class="row mb-10">
+                                    <div class="col-md-12 col-sm-12">
+                                        <a href="./chat-users.php?id=<?= $user_id ?>"
+                                           class="btn btn-success w-100">
+                                            Send Message
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <a href="./view-profiles.php?sendWinkTo=<?= $user_id ?>"
+                                           name="SendWink" class="btn btn-info w-100">Like</a>
+
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <a href="./full-profile.php?id=<?= $user_id ?>"
+                                           name="ViewProf" class="btn btn-info w-100">View</a>
+                                    </div>
+            
         </div>
     </div>
-    
+
     <?php
 } else {
     echo "<p class='error-message'>User not found.</p>";
 }
-
 $conn->close();
 ?>
+ </body>
+
 <?php include("./includes/footer.php") ?>
-</body>
-</html>
+ </html>
