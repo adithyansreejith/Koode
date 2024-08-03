@@ -7,7 +7,7 @@ if (isset($_SESSION["userId"])) {
     $user = $userId !== 0 && !IsVariableIsSetOrEmpty($_SESSION['user']) ? $_SESSION['user'] : [];
 }
 ?>
-<footer class="mt-10 bg-dark">
+<footer class="mt-10 bg-danger">
     <div class="container">
         <div class="row ">
             <div class="col-md-4 text-center text-md-left ">
@@ -37,13 +37,17 @@ if (isset($_SESSION["userId"])) {
                         ?>
 
                     </p>
-                    <p class="text-light py-4 mb-4">&copy;<?php echo date("Y"); ?> ADITHYAN AND BHAVANA</p>
+                    <p class="text-light py-4 mb-4">&copy;<?php echo date("Y"); ?> Adi&Bhavana</p>
                 </div>
             </div>
 
  <div class="col-md-4 text-white my-4 text-center text-md-left ">
                 <span class=" font-weight-bold ">About Us</span>
-                <p class="text-warning my-2">We started this as our 5th sem mini project</p>
+                <p class="text-warning my-2">We started this as our 5th sem mini project<br>
+                    Need to work on support page<br>
+                    Registration and full profile unfinished<br>
+                    Alignment on view profile page not right
+                </p>
             </div>
         </div>
     </div>

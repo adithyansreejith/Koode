@@ -311,7 +311,7 @@ WHERE (msg_from_user_id =:userId and msg_to_user_id=:sentToUserID) or (msg_from_
         }
 
         .sent_msg p {
-            background: #05728f none repeat scroll 0 0;
+            background: #f04343 none repeat scroll 0 0;
             border-radius: 3px;
             font-size: 14px;
             margin: 0;
@@ -356,7 +356,7 @@ WHERE (msg_from_user_id =:userId and msg_to_user_id=:sentToUserID) or (msg_from_
         }
 
         .msg_send_btn {
-            background: #05728f none repeat scroll 0 0;
+            background: #8f0505 none repeat scroll 0 0;
             border: medium none;
             border-radius: 50%;
             color: #fff;
@@ -394,7 +394,7 @@ WHERE (msg_from_user_id =:userId and msg_to_user_id=:sentToUserID) or (msg_from_
                     <div class="inbox_people">
                         <div class="headind_srch">
                             <div class="recent_heading">
-                                <h4>Recent Chats</h4>
+                                <h4 style="color:red;">Recent Chats</h4>
                             </div>
                             <!--                            <div class="srch_bar">-->
                             <!--                                <div class="stylish-input-group">-->
@@ -508,7 +508,7 @@ WHERE (msg_from_user_id =:userId and msg_to_user_id=:sentToUserID) or (msg_from_
                                     <input type="text" name="msg" class="write_msg" placeholder="Type a message"
                                            required/>
                                     <button id="sendBtn" class="msg_send_btn" type="button">
-                                        <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                        <i class="fa fa-paper-plane-o" aria-hidden="true" ></i>
                                     </button>
                                     <input type="submit" id="sendMessage" style="display: none;" value="Send"
                                            name="SendMessage"/>

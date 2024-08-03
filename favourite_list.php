@@ -114,9 +114,9 @@ if (isset($_SESSION['userId'])) {
                 <td><?php echo $item['lastName']; ?></td>
                 <td><?php echo $item['dateCreated']; ?></td>
                 <td><a href="./full-profile.php?id=<?= $item["UsrId"] ?>"
-               name="ViewProf" class="btn btn-info w-100" style="border-radius: 30px; overflow: hidden;">View</a></td>
+               name="ViewProf" class="btn btn-danger w-100" style="border-radius: 30px; overflow: hidden;">View</a></td>
                        <td><a href="./favourite_list.php?id=<?php echo $item['favouriteId']; ?>"
-                       class="btn btn-danger" style="border-radius: 30px; overflow: hidden;">Remove</a></td>
+                       class="btn btn-dark" style="border-radius: 30px; overflow: hidden;">Remove</a></td>
             </tr>
         <?php }
         ?>

@@ -234,7 +234,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
     }
     ?>
 
-    <div class="mb15">
+    <div class="mb15" style="margin-top:10px">
         <div class="row mt-10 mb-10">
             <div class="col-md-12 text-center">
                 <h2>Search Profiles</h2>
@@ -248,14 +248,14 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                             <div class="form-group">
                                 <label for="firsName">Search by first name</label>
                                 <input name="firstName" id="firstName" type="text" class="form-control"
-                                       placeholder="First name" value="<?= $firstName ?>" style="border-radius: 20px; overflow: hidden;">
+                                       placeholder="First name" value="<?= $firstName ?>" style="border-radius: 20px; overflow: hidden; border:2px solid red;">
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="lastName">Search by city</label>
                                 <input name="city" id="city" type="text" class="form-control"
-                                       placeholder="City" value="<?= $city ?>" style="border-radius: 20px; overflow: hidden;">
+                                       placeholder="City" value="<?= $city ?>" style="border-radius: 20px; overflow: hidden; border:2px solid red;">
                             </div>
                         </div>
                     </div>
@@ -263,7 +263,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                         <div class="col">
                             <div class="form-group">
                                 <label for="gender">Search by gender</label>
-                                <select id="gender" class="form-control" name="gender" style="border-radius: 20px; overflow: hidden;">
+                                <select id="gender" class="form-control" name="gender" style="border-radius: 20px; overflow: hidden; border:2px solid red;">
                                     <option value="" <?php if (empty($gender)) {
                                         echo "selected";
                                     } ?>>-- Select gender
@@ -306,10 +306,10 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                     </div>
                     <div class="form-row">
                         <div class="col-md-10 col-sm-12">
-                            <input type="submit" name="Search" value="Search" class="btn btn-dark w-100" style="border-radius: 15px; overflow: hidden;">
+                            <input type="submit" name="Search" value="Search" class="btn btn-danger w-100" style="border-radius: 15px; overflow: hidden;">
                         </div>
                         <div class="col-md-2 col-sm-12">
-                            <input type="submit" name="Reset" value="Reset filters" class="btn btn-info w-100" style="border-radius: 20px; overflow: hidden;">
+                            <input type="submit" name="Reset" value="Reset filters" class="btn btn-dark w-100" style="border-radius: 20px; overflow: hidden;">
                         </div>
                     </div>
                 </form>

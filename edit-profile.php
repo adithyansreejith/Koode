@@ -165,7 +165,7 @@ if (isset($_SESSION['userId'])) {
             <?php } ?>
         </div>
         <div class="row" id="main">
-            <div class="col-md-4 well" id="leftPanel" style="border-radius: 20px; overflow: hidden;">
+            <div class="col-md-4 well bg-danger" id="leftPanel" style="border-radius: 10px; overflow: hidden;">
                 <div class="row">
                     <div class="col-md-12">
                         <br>
@@ -275,7 +275,7 @@ if (isset($_SESSION['userId'])) {
                             <div class="row">
                                 <div class="col-xs-12 col-md-6"></div>
                                 <div class="col-xs-12 col-md-6">
-                                    <button class="btn btn-lg btn-primary btn-block text-uppercase" name="Submit"
+                                    <button class="btn btn-lg btn-danger btn-block text-uppercase" name="Submit"
                                             type="submit" style="border-radius: 30px; overflow: hidden;">Update
                                     </button>
                                 </div>
@@ -329,7 +329,7 @@ if (isset($_SESSION['userId'])) {
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border-radius: 30px; overflow: hidden;">Close</button>
-                                <button class="btn btn-primary" name="resetPassword" type="Submit" style="border-radius: 30px; overflow: hidden;">Reset Password
+                                <button class="btn btn-danger" name="resetPassword" type="Submit" style="border-radius: 30px; overflow: hidden;">Reset Password
                                 </button>
                             </div>
                         </form>

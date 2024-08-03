@@ -92,7 +92,7 @@ if (isset($_POST['Submit'])) {
                                     <label for="inputPassword">Password</label>
                                 </div>
 
-                                <button class="btn btn-lg btn-primary btn-block text-uppercase" name="Submit" type="submit" style="border-radius: 30px; overflow: hidden;">Login</button>
+                                <button class="btn btn-lg btn-danger btn-block text-uppercase" name="Submit" type="submit" style="border-radius: 30px; overflow: hidden;">Login</button>
                                 <div class="sign-up">
                                     Don't have an account? <a href="./register.php">Register</a>
                                 </div>

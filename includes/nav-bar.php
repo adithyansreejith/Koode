@@ -10,8 +10,9 @@ if (isset($_SESSION["userId"])) {
 //just testing 
 
 ?>
+
 <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <nav class="navbar navbar-dark bg-danger navbar-expand-sm ">
         <a class="navbar-brand" href="./index.php">
             <!--        <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/logo_white.png" width="30" height="30" alt="logo">-->
             KOODE <span class="text-warning">With You</span>
@@ -26,7 +27,7 @@ if (isset($_SESSION["userId"])) {
                 if ($userId !== 0 && count($user) > 0) {
                     ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="./full-profile.php?id=<?= $userId?>" style="color: rgb(255, 191, 0);" onclick="return true">Hello <?= $user["firstName"] . " " . $user["lastName"] ?>!</a>
+                        <a class="nav-link" href="./full-profile.php?id=<?= $userId?>" style="color: #ffe600;" onclick="return true">Hello <?= $user["firstName"] . " " . $user["lastName"] ?>!</a>
                     </li>
                     <?php
                 }

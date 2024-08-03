@@ -236,7 +236,7 @@ session_start();
                                 </fieldset>
 
                                 <fieldset class="form-group text-center">
-                                    <button class="btn btn-primary" type="submit" style="border-radius: 30px; overflow: hidden;">Send Message</button>
+                                    <button class="btn btn-danger" type="submit" style="border-radius: 30px; overflow: hidden;">Send Message</button>
                                 </fieldset>
                             </form>
                         </div>

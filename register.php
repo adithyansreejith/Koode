@@ -83,7 +83,7 @@ if (isset($_POST['Submit'])) {
     include("./includes/nav-bar.php")
     ?>
 
-    <div class="row">
+    <div class="row" >
         <div class="col-md-12 col-sm-12 col-xs-12" style="border-radius: 20px; overflow: hidden;">
 
             <div class="col-lg-10 col-xl-9 mx-auto" style="border-radius: 20px; overflow: hidden;">
@@ -236,7 +236,7 @@ if (isset($_POST['Submit'])) {
                                 </button>
                             </div>
                             <button name="Submit" id="Submit"
-                                    class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="border-radius: 30px; overflow: hidden;">
+                                    class="btn btn-lg btn-danger btn-block text-uppercase" type="submit" style="border-radius: 30px; overflow: hidden;">
                                 Register
                             </button>
                             <div class="sign-up">

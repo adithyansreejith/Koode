@@ -21,7 +21,7 @@ img {
 img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border: 10px solid #FFBF00;
+  border: 10px solid #f04343;
 }
 
  .profile-container {
@@ -116,7 +116,7 @@ if ($result->num_rows > 0) {
         <div class="row mb-10">
                                     <div class="col-md-12 col-sm-12" style="border-radius: 20px; overflow: hidden;">
                                         <a href="./chat-users.php?id=<?= $user_id ?>"
-                                           class="btn btn-success w-100" style="border-radius: 30px; overflow: hidden;">
+                                           class="btn btn-danger w-100" style="border-radius: 30px; overflow: hidden;">
                                             Send Message
                                         </a>
                                     </div>
