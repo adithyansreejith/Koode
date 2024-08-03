@@ -13,7 +13,18 @@
     <?php include("./includes/header.php") ?>
     <link href="./css/style.css" rel="stylesheet" type="text/css">
         <style>
-            .profile-container {
+
+img {
+  transition: transform 0.2s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 10px solid #FFBF00;
+}
+
+ .profile-container {
     width: 80%;
     margin: 40px auto;
     padding: 20px;
@@ -89,7 +100,9 @@ if ($result->num_rows > 0) {
     <div class="profile-container">
         <h1 class="profile-header"><?php echo $user['firstName']; ?></h1>
         <div class="profile-info">
+        <a href="<?php echo $user['imgUrl']; ?>" alt="Profile Pic" onerror="this.src='images/alt.png';" target="_blank"><!--to open in another window -->
             <img src="<?php echo $user['imgUrl']; ?>" alt="Profile Pic" onerror="this.src='images/alt.png';">
+            </a>
             <p class="profile-field"><strong>First Name:</strong> <?php echo $user['firstName']; ?></p>
             <p class="profile-field"><strong>Last Name:</strong> <?php echo $user['lastName']; ?></p>
             <p class="profile-field"><strong>City:</strong> <?php echo $user['city']; ?></p>
