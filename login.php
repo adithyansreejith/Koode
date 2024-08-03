@@ -53,7 +53,7 @@ if (isset($_POST['Submit'])) {
     include("./includes/nav-bar.php")
     ?>
 
-    <div class="container-fluid ">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="col-lg-10 col-xl-9 mx-auto">
@@ -73,26 +73,26 @@ if (isset($_POST['Submit'])) {
 
                             <?php } ?>
                         </div>
-                    <div class="card card-signin flex-row my-5">
+                    <div class="card card-signin flex-row my-5" style="border-radius: 20px; overflow: hidden;">
                         <div class="login-card-img-left d-none d-md-flex">
                             <!-- Background image for card set in CSS! -->
                         </div>
 
-                        <div class="card-body">
+                        <div class="card-body" style="border-radius: 20px; overflow: hidden;">
                             <h5 class="card-title text-center">Login</h5>
-                            <form class="form-signin" action="login.php" method="post">
+                            <form class="form-signin" action="login.php" method="post" >
                                 <div class="form-label-group">
-                                    <input type="email" id="inputUserame" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" class="form-control" placeholder="Username" required autofocus>
+                                    <input type="email" id="inputUserame" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" class="form-control" placeholder="Username" required autofocus style="border-radius: 20px; overflow: hidden;">
                                     <label for="inputUserame">Username</label>
                                 </div>
                                <hr>
 
                                 <div class="form-label-group">
-                                    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+                                    <input type="password" id="inputPassword" style="border-radius: 20px; overflow: hidden;" name="password" class="form-control" placeholder="Password" required>
                                     <label for="inputPassword">Password</label>
                                 </div>
 
-                                <button class="btn btn-lg btn-primary btn-block text-uppercase" name="Submit" type="submit">Login</button>
+                                <button class="btn btn-lg btn-primary btn-block text-uppercase" name="Submit" type="submit" style="border-radius: 30px; overflow: hidden;">Login</button>
                                 <div class="sign-up">
                                     Don't have an account? <a href="./register.php">Register</a>
                                 </div>

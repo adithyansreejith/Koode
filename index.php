@@ -23,8 +23,8 @@ session_start();
 
         <div id="carouselExampleIndicators" class="carousel slide w-100" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="border-radius: 10px; overflow: hidden;"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1" style="border-radius: 10px; overflow: hidden;"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -148,9 +148,9 @@ session_start();
 
                     <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
-                            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="0" class="active" style="border-radius: 20px; overflow: hidden;"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="1" style="border-radius: 20px; overflow: hidden;"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="2" style="border-radius: 20px; overflow: hidden;"></li>
                         </ol>
 
                         <div class="carousel-inner" role="listbox">
@@ -220,23 +220,23 @@ session_start();
                                 <fieldset class="form-group">
                                     <label for="formName">Your Name:</label>
                                     <input id="formName" class="form-control" type="text" placeholder="Your Name"
-                                           required>
+                                           required style="border-radius: 20px; overflow: hidden;">
                                 </fieldset>
 
                                 <fieldset class="form-group">
                                     <label for="formEmail1">Email address:</label>
                                     <input id="formEmail1" class="form-control" type="email" placeholder="Enter email"
-                                           required>
+                                           required style="border-radius: 20px; overflow: hidden;">
                                 </fieldset>
 
                                 <fieldset class="form-group">
                                     <label for="formMessage">Your Message:</label>
                                     <textarea id="formMessage" class="form-control" rows="3" placeholder="Your message"
-                                              required></textarea>
+                                              required style="border-radius: 20px; overflow: hidden;"></textarea>
                                 </fieldset>
 
                                 <fieldset class="form-group text-center">
-                                    <button class="btn btn-primary" type="submit">Send Message</button>
+                                    <button class="btn btn-primary" type="submit" style="border-radius: 30px; overflow: hidden;">Send Message</button>
                                 </fieldset>
                             </form>
                         </div>

@@ -84,9 +84,9 @@ if (isset($_POST['Submit'])) {
     ?>
 
     <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12" style="border-radius: 20px; overflow: hidden;">
 
-            <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="col-lg-10 col-xl-9 mx-auto" style="border-radius: 20px; overflow: hidden;">
                 <div class="row mt-5">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <?php
@@ -111,62 +111,62 @@ if (isset($_POST['Submit'])) {
                         } ?>
                     </div>
                 </div>
-                <div class="card card-signin flex-row ">
+                <div class="card card-signin flex-row " style="border-radius: 20px; overflow: hidden;">
 
                     <div class="card-img-left d-none d-md-flex">
                         <!-- Background image for card set in CSS! -->
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" style="border-radius: 20px; overflow: hidden;">
                         <h5 class="card-title text-center">Register</h5>
                         <form class="form-signin" action="register.php" method="post" enctype="multipart/form-data">
                             <div class="form-label-group">
                                 <input type="email" name="email" id="inputEmail" class="form-control"
                                        placeholder="Email address" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-                                       required autofocus>
+                                       required autofocus style="border-radius: 20px; overflow: hidden;">
                                 <label for="inputEmail">Email address</label>
                             </div>
 
                             <div class="form-label-group">
                                 <input type="text" name="firstName" id="firstName" class="form-control"
-                                       placeholder="First Name" required>
+                                       placeholder="First Name" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="firstName">First Name</label>
                             </div>
                             <div class="form-label-group">
                                 <input type="text" id="lastName" name="lastName" class="form-control"
-                                       placeholder="Last Name" required>
+                                       placeholder="Last Name" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="lastName">Last Name</label>
                             </div>
                             <hr>
 
                             <div class="form-label-group">
                                 <input type="password" name="password" id="inputPassword" class="form-control"
-                                       placeholder="Password" required>
+                                       placeholder="Password" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="inputPassword">Password</label>
                             </div>
 
                             <div class="form-label-group">
                                 <input type="password" name="confirmpassword" id="inputConfirmPassword" class="form-control"
-                                       placeholder="Password" required>
+                                       placeholder="Password" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="inputConfirmPassword">Confirm password</label>
                             </div>
                             <hr>
                             <div class="form-label-group">
                                 <input type="text" name="city" id="inputCity" class="form-control"
-                                       placeholder="City" required>
+                                       placeholder="City" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="inputCity">City</label>
                             </div>
                             <div class="form-label-group">
                                 <input type="text" name="hobby" id="Hobby" class="form-control"
-                                       placeholder="Hobbies">
+                                       placeholder="Hobbies" style="border-radius: 20px; overflow: hidden;">
                                 <label for="inputHobby">Hobbies</label>
                             </div>
                             <div class="form-label-group">
                                 <input type="text" name="Job" id="Job" class="form-control"
-                                       placeholder="Job" required>
+                                       placeholder="Job" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="inputJob">Occupation</label>
                             </div>
                             <div class="form-label-group">
-                                <input type="date" id="birthDate" name="birthDate" class="form-control" required>
+                                <input type="date" id="birthDate" name="birthDate" class="form-control" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="birthDate">Birth Date</label>
                             </div>
                             
@@ -208,7 +208,7 @@ if (isset($_POST['Submit'])) {
                             </div>
                             <hr>
                             <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px; overflow: hidden;">
                                 If Yes, Choose Which
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -218,7 +218,7 @@ if (isset($_POST['Submit'])) {
                             </div>
                             </div>
                             <hr>
-                            <div class="input-group mb-3">
+                            <div class="input-group mb-3" style="border:1px solid blue; border-radius: 20px; overflow: hidden;">
                                 <div class="custom-file">
                                     <input accept="image/*" type="file" name="fileUpload"
                                            class="form-control custom-file-input"
@@ -236,7 +236,7 @@ if (isset($_POST['Submit'])) {
                                 </button>
                             </div>
                             <button name="Submit" id="Submit"
-                                    class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">
+                                    class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="border-radius: 30px; overflow: hidden;">
                                 Register
                             </button>
                             <div class="sign-up">
