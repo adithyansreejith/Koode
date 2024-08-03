@@ -148,7 +148,7 @@ WHERE (msg_from_user_id =:userId and msg_to_user_id=:sentToUserID) or (msg_from_
         .container {
             max-width: 1170px;
             margin: auto;
-            border-radius: 10px;
+            border-radius: 20px; overflow: hidden;
         }
 
         img {
@@ -389,8 +389,8 @@ WHERE (msg_from_user_id =:userId and msg_to_user_id=:sentToUserID) or (msg_from_
     <div class="row mb-10">
         <div class="container">
             <h3 class="mt-10 text-center">Messaging</h3>
-            <div class="messaging">
-                <div class="inbox_msg">
+            <div class="messaging" style="border-radius: 20px; overflow: hidden;">
+                <div class="inbox_msg" style="border-radius: 20px; overflow: hidden; border:2px solid grey;">
                     <div class="inbox_people">
                         <div class="headind_srch">
                             <div class="recent_heading">
@@ -449,7 +449,7 @@ WHERE (msg_from_user_id =:userId and msg_to_user_id=:sentToUserID) or (msg_from_
                             <?php } ?>
                         </div>
                     </div>
-                    <div class="mesgs">
+                    <div class="mesgs" >
                         <div class="msg_history">
                             <?php
                             foreach ($msgList

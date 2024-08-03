@@ -248,7 +248,8 @@ if (isset($_POST['Submit'])) {
             </div>
         </div>
     </div>
-
+<hr>
+<hr>
     <!-- footer -->
     <?php include("./includes/footer.php") ?>
     <!-- end of footer -->

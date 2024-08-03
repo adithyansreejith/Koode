@@ -165,7 +165,7 @@ if (isset($_SESSION['userId'])) {
             <?php } ?>
         </div>
         <div class="row" id="main">
-            <div class="col-md-4 well" id="leftPanel">
+            <div class="col-md-4 well" id="leftPanel" style="border-radius: 20px; overflow: hidden;">
                 <div class="row">
                     <div class="col-md-12">
                         <br>
@@ -209,43 +209,43 @@ if (isset($_SESSION['userId'])) {
                             <hr class="colorgraph">
                             <div class="form-label-group">
                                 <input type="text" name="firstName" id="firstName" class="form-control"
-                                       placeholder="First Name" value="<?php echo $firstName; ?>" required>
+                                       placeholder="First Name" value="<?php echo $firstName; ?>" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="firstName">First Name</label>
                             </div>
                             <div class="form-label-group">
                                 <input type="text" id="lastName" name="lastName" class="form-control"
-                                       placeholder="Last Name" value="<?php echo $lastName; ?>" required>
+                                       placeholder="Last Name" value="<?php echo $lastName; ?>" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="lastName">Last Name</label>
                             </div>
                             <div class="form-label-group">
                                 <input type="email" name="email" id="inputEmail" class="form-control"
                                        placeholder="Email address" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-                                       value="<?php echo $email; ?>" required>
+                                       value="<?php echo $email; ?>" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="inputEmail">Email address</label>
                             </div>
                             <div class="form-label-group">
                                 <textarea class="form-control" name="bio" id="exampleFormControlTextarea1" rows="3"
-                                          placeholder="Bio-info"><?php echo $bio; ?></textarea>
+                                          placeholder="Bio-info" style="border-radius: 20px; overflow: hidden;"><?php echo $bio; ?></textarea>
                             </div>
                             <div class="form-label-group">
                                 <input type="password" name="password" id="inputPassword" class="form-control"
-                                       placeholder="Password" value="<?php echo $password; ?>" disabled>
+                                       placeholder="Password" value="<?php echo $password; ?>" disabled style="border-radius: 20px; overflow: hidden;">
                                 <label for="inputPassword">Password</label>
                             </div>
                             <div class="form-label-group">
                                 <button type="button" class="btn btn-success" data-toggle="modal"
-                                        data-target="#changePasswordModal">
+                                        data-target="#changePasswordModal" style="border-radius: 30px; overflow: hidden;">
                                     Change password
                                 </button>
                             </div>
                             <div class="form-label-group">
                                 <input type="type" id="city" name="city" class="form-control"
-                                       value="<?php echo $city; ?>" required>
+                                       value="<?php echo $city; ?>" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="city">City</label>
                             </div>
                             <div class="form-label-group">
                                 <input type="date" id="birthDate" name="birthDate" class="form-control"
-                                       value="<?php echo $birthDate; ?>" required>
+                                       value="<?php echo $birthDate; ?>" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="birthDate">Birth Date</label>
                             </div>
 
@@ -269,14 +269,14 @@ if (isset($_SESSION['userId'])) {
                                 <input type="checkbox" id="notification" name="notification" value="notification" <?php if ($notification === "1") {
                                     echo "checked";
                                 }?> >
-                                <label for="notification">Recieve Notification or Not</label>
+                                <label for="notification">Receive Notification or Not</label>
                             </div>
                             <hr class="colorgraph">
                             <div class="row">
                                 <div class="col-xs-12 col-md-6"></div>
                                 <div class="col-xs-12 col-md-6">
                                     <button class="btn btn-lg btn-primary btn-block text-uppercase" name="Submit"
-                                            type="submit">Update
+                                            type="submit" style="border-radius: 30px; overflow: hidden;">Update
                                     </button>
                                 </div>
                             </div>
@@ -302,7 +302,7 @@ if (isset($_SESSION['userId'])) {
                                     <div class="row">
                                         <div class="col-md-12">
                                             <input type="password" class="form-control" id="oldPassword"
-                                                   name="oldPassword" required placeholder="Password">
+                                                   name="oldPassword" required placeholder="Password" style="border-radius: 20px; overflow: hidden;">
                                         </div>
                                     </div>
                                 </div>
@@ -312,7 +312,7 @@ if (isset($_SESSION['userId'])) {
                                     <div class="row">
                                         <div class="col-md-12">
                                             <input type="password" class="form-control" id="newPassword"
-                                                   name="newPassword" required placeholder="New Password">
+                                                   name="newPassword" required placeholder="New Password" style="border-radius: 20px; overflow: hidden;">
                                         </div>
                                     </div>
                                 </div>
@@ -322,14 +322,14 @@ if (isset($_SESSION['userId'])) {
                                     <div class="row">
                                         <div class="col-md-12">
                                             <input type="password" class="form-control" id="confirmPassword"
-                                                   name="confirmPassword" required placeholder="Confirm password">
+                                                   name="confirmPassword" required placeholder="Confirm password" style="border-radius: 20px; overflow: hidden;">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button class="btn btn-primary" name="resetPassword" type="Submit">Reset Password
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border-radius: 30px; overflow: hidden;">Close</button>
+                                <button class="btn btn-primary" name="resetPassword" type="Submit" style="border-radius: 30px; overflow: hidden;">Reset Password
                                 </button>
                             </div>
                         </form>
