@@ -101,7 +101,7 @@ if (isset($_SESSION['userId'])) {
             <th scope="col">FirstName</th>
             <th scope="col">LastName</th>
             <th scope="col">Favourited On</th>
-            <th scope="col">Action</th>
+            <th scope="col"></th>
             <th scope="col"></th>
         </tr>
         </thead>
