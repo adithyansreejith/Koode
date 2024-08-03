@@ -2,27 +2,7 @@
 ### Installation
   - To add the database, Import the "datingDB.sql" file which contains pre-entered data and test users from the root of the project directory into your phpMyAdmin or MySQL Workbench.
   - Set up your Database credentials in the database file located at "./Connector/DbConnectorPDO.php".
-  - Run the project from your favourite IDE or put it in the "WWW" folder of WAMP or XAMPP. 
-
-                    
-### Test Credentials
-
-Email  | Password | UserRole 
-------------- | ------------- | -------------
-meet@gmail.com  | test | premium user
-vatsal@gmail.com  | test | premium user
-justin@gmail.com  | test | regular user
-janki@gmail.com  | test | regular user
-mariadb@gmail.com  | test | regular user
-angelpriya@gmail.com  | test | regular user
-testing@gmail.com | test | premium user
-
-### Helper Functions
-
-- Helper Functions are located in "./helper/helperFunctions.php
-- Helper functions contains some common functions which are used globally in the site to improve code readability.
-- Example: IsVariableIsSetOrEmpty($variableName) : Checks if variable is set and not empty. Returns TRUE or FALSE.
-
+  - Run the project from your favourite IDE or put it in the "WWW" folder.
 
 ### Features
 
