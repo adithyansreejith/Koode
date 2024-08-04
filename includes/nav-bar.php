@@ -68,11 +68,14 @@ if (isset($_SESSION["userId"])) {
                                 
                                 <li><a class="dropdown-item" href="./view-profiles.php">View Profiles</a></li>
                                 <li><a class="dropdown-item" href="./favourite_list.php">Favourite List</a></li>
-                                <li><a class="dropdown-item" href="./chat-users.php?id=<?= $userId ?>">Inbox</a></li>
+                                <!--<li><a class="dropdown-item" href="./chat-users.php?id=<?= $userId ?>">Inbox</a></li>-->
                                 <li><a class="dropdown-item" href="./edit-profile.php">Edit Profile</a></li>
                                 <li><a class="dropdown-item" href=""></a></li>
                                 <li style="border: radius 0.5rem; background-color:red;"><a class="dropdown-item" href="./logout.php" style="color:white;">Logout</a></li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./chat-users.php?id=<?= $userId ?>">Messages</a>
                         </li>
                         <?php
                     } else {
