@@ -62,7 +62,7 @@ if (isset($_SESSION["userId"])) {
                         ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                                <i class="fas fa-bars"></i> <!-- Hamburger Icon -->
+                                <i class="fas fa-bars" style="font-size: 1.5rem;"></i> <!-- Hamburger Icon -->
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 
@@ -71,11 +71,13 @@ if (isset($_SESSION["userId"])) {
                                 <!--<li><a class="dropdown-item" href="./chat-users.php?id=<?= $userId ?>">Inbox</a></li>-->
                                 <li><a class="dropdown-item" href="./edit-profile.php">Edit Profile</a></li>
                                 <li><a class="dropdown-item" href=""></a></li>
-                                <li style="border: radius 0.5rem; background-color:red;"><a class="dropdown-item" href="./logout.php" style="color:white;">Logout</a></li>
+                                <li><a class="dropdown-item" href="./logout.php" style="color:white;">Logout</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./chat-users.php?id=<?= $userId ?>">Messages</a>
+                            <a class="nav-link" href="./chat-users.php?id=<?= $userId ?>">
+                            <i class="fas fa-envelope" style="font-size: 1.rem;"></i> 
+                            Messages</a>
                         </li>
                         <?php
                     } else {
