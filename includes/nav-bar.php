@@ -62,7 +62,7 @@ if (isset($_SESSION["userId"])) {
                         ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                                <i class="fas fa-bars" style="font-size: 1.5rem;"></i> <!-- Hamburger Icon -->
+                                <i class="fas fa-list" style="font-size: 1.rem;"></i> <!-- Hamburger Icon -->
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 
@@ -70,7 +70,7 @@ if (isset($_SESSION["userId"])) {
                                 <li><a class="dropdown-item" href="./favourite_list.php"><i class="fas fa-heart"></i>&nbsp;Favourite List</a></li>
                                 <!--<li><a class="dropdown-item" href="./chat-users.php?id=<?= $userId ?>">Inbox</a></li>-->
                                 <li><a class="dropdown-item" href="./edit-profile.php"><i class="fas fa-pen-to-square"></i>&nbsp;Edit Profile</a></li>
-                                <li><a class="dropdown-item" href=""></a></li>
+                                <li></li>
                                 <li><a class="dropdown-item" href="./logout.php" style="color:solid red;"><i class="fas fa-arrow-right-from-bracket"></i>&nbsp;<b>LogOut</b></a></li>
                             </ul>
                         </li>
@@ -83,17 +83,17 @@ if (isset($_SESSION["userId"])) {
                     } else {
                         ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="./login.php">Login</a>
+                            <a class="nav-link" href="./login.php"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;Login</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="./register.php">Sign Up</a>
+                            <a class="nav-link" href="./register.php"><i class="fas fa-user-plus"></i>&nbsp;Sign Up</a>
                         </li>
                         <?php
                     }
                     ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="./index.php"><i class="fas fa-home"></i>Home&nbsp;</a>
+                        <a class="nav-link" href="./index.php"><i class="fas fa-home"></i>&nbsp;Home&nbsp;</a>
                     </li>
                 </ul>
             </div>
