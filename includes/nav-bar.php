@@ -71,7 +71,7 @@ if (isset($_SESSION["userId"])) {
                                 <!--<li><a class="dropdown-item" href="./chat-users.php?id=<?= $userId ?>">Inbox</a></li>-->
                                 <li><a class="dropdown-item" href="./edit-profile.php">Edit Profile</a></li>
                                 <li><a class="dropdown-item" href=""></a></li>
-                                <li><a class="dropdown-item" href="./logout.php" style="color:white;">Logout</a></li>
+                                <li><a class="dropdown-item" href="./logout.php" style="color:solid red;"><b>LogOut</b></a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
