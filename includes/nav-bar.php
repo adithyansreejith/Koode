@@ -66,17 +66,17 @@ if (isset($_SESSION["userId"])) {
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 
-                                <li><a class="dropdown-item" href="./view-profiles.php">View Profiles</a></li>
-                                <li><a class="dropdown-item" href="./favourite_list.php">Favourite List</a></li>
+                                <li><a class="dropdown-item" href="./view-profiles.php"><i class="fas fa-magnifying-glass"></i>&nbsp;View Profiles</a></li>
+                                <li><a class="dropdown-item" href="./favourite_list.php"><i class="fas fa-heart"></i>&nbsp;Favourite List</a></li>
                                 <!--<li><a class="dropdown-item" href="./chat-users.php?id=<?= $userId ?>">Inbox</a></li>-->
-                                <li><a class="dropdown-item" href="./edit-profile.php">Edit Profile</a></li>
+                                <li><a class="dropdown-item" href="./edit-profile.php"><i class="fas fa-pen-to-square"></i>&nbsp;Edit Profile</a></li>
                                 <li><a class="dropdown-item" href=""></a></li>
-                                <li><a class="dropdown-item" href="./logout.php" style="color:solid red;"><b>LogOut</b></a></li>
+                                <li><a class="dropdown-item" href="./logout.php" style="color:solid red;"><i class="fas fa-arrow-right-from-bracket"></i>&nbsp;<b>LogOut</b></a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./chat-users.php?id=<?= $userId ?>">
-                            <i class="fas fa-envelope" style="font-size: 1.rem;"></i> 
+                            <i class="fas fa-comments" style="font-size: 1.rem;"></i> 
                             Messages</a>
                         </li>
                         <?php
@@ -93,7 +93,7 @@ if (isset($_SESSION["userId"])) {
                     }
                     ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="./index.php">Home&nbsp;</a>
+                        <a class="nav-link" href="./index.php"><i class="fas fa-home"></i>Home&nbsp;</a>
                     </li>
                 </ul>
             </div>
