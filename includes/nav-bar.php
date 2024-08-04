@@ -16,6 +16,7 @@ if (isset($_SESSION["userId"])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome CSS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
@@ -60,8 +61,10 @@ if (isset($_SESSION["userId"])) {
                     if ($userId !== 0) {
                         ?>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Menu</a>
-                            <ul class="dropdown-menu">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-bars"></i> <!-- Hamburger Icon -->
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
                                 <li><a class="dropdown-item" href="./edit-profile.php">Edit Profile</a></li>
                                 <li><a class="dropdown-item" href="./view-profiles.php">View Profiles</a></li>
                                 <li><a class="dropdown-item" href="./favourite_list.php">Favourite List</a></li>
