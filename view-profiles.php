@@ -243,7 +243,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
         <div class="row mb-10" >
             <div class="col-md-12">
                 <form method="post" action="view-profiles.php">
-                    <div class="form-row mb-10">
+                    <div class="form-row mb-10" style="margin-left:auto; margin-right: auto;">
                         <div class="col">
                             <div class="form-group">
                                 <label for="firsName">Search by first name</label>
@@ -251,7 +251,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                                        placeholder="First name" value="<?= $firstName ?>" style="border-radius: 20px; overflow: hidden; border:2px solid red;">
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col" style="margin-left:auto; margin-right: auto;">
                             <div class="form-group">
                                 <label for="lastName">Search by city</label>
                                 <input name="city" id="city" type="text" class="form-control"
@@ -259,7 +259,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                             </div>
                         </div>
                     </div>
-                    <div class="form-row">
+                    <div class="form-row" style="margin-left:auto; margin-right: auto;">
                         <div class="col">
                             <div class="form-group">
                                 <label for="gender">Search by gender</label>
@@ -346,8 +346,8 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                     echo '<div class="row mb-10">';
                 }
                 ?>
-                <div class="col-md-3" >
-                    <div class="card card-container" style="border-radius: 20px; overflow: hidden;">
+                <div class="col-md-3">
+                    <div class="card card-container" style="border-radius: 20px; overflow: hidden; margin-left:auto; margin-right: auto;">
                     <a href="./full-profile.php?id=<?= $profile["id"] ?>"
                     name="ViewProf">
                         <img class="card-img-top"
