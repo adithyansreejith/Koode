@@ -46,7 +46,7 @@ if (isset($_SESSION["userId"])) {
                 <p class="text-warning my-2">We started this as our 5th sem mini project<br>
                     Need to work on support page<br>
                     Registration and full profile unfinished<br>
-                    Alignment on view profile page not right
+                    Alignment on view profile page not right, we can add an algorithm, sorting
                 </p>
             </div>
         </div>
