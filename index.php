@@ -19,7 +19,7 @@ session_start();
     include("./includes/nav-bar.php")
     ?>
 
-     <?php
+    <?php
     if ($userId== 0) {
         ?>
         <div class="row mt-10 mb-10">
@@ -32,7 +32,6 @@ session_start();
         <?php
     }
     ?>
-
     <div class="container-fluid p-0">
 
         <div id="carouselExampleIndicators" class="carousel slide w-100" data-ride="carousel">

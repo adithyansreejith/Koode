@@ -73,9 +73,9 @@ if (isset($_POST['Submit'])) {
 
                             <?php } ?>
                         </div>
-                    <div class="card card-signin flex-row my-5" style="border-radius: 20px; border:1px solid red;">
+                    <div class="card card-signin flex-row my-5" style="border-radius: 20px; border:1px solid red">
                         <div class="login-card-img-left d-none d-md-flex">
-                            <!-- Background image for card set in CSS! -->
+                        <img src="./images/site_images/login-background.png" alt="Login Image" style="width: 125%; background-size: cover;">
                         </div>
 
                         <div class="card-body" style="border-radius: 20px; overflow: hidden;">
