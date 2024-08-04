@@ -63,7 +63,7 @@
 .login-card-img-left {
     width: 45%;
     /* Link to your background image using in the property below! */
-    background: scroll center url("../images/site_images/login-background.jpg");
+    background: scroll center url('/images/site_images/login-background.png');
     background-size: cover;
 }
 
@@ -94,7 +94,7 @@
 .card-signin .card-img-left {
     width: 45%;
     /* Link to your background image using in the property below! */
-    background: scroll center url("../images/site_images/register-backgroung.jpg");
+    background: scroll center url("../images/site_images/reg_bg.jpg");
     background-size: cover;
 }
 
