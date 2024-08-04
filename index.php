@@ -96,8 +96,7 @@ session_start();
                                     <div class="col-md-6">
                                         <blockquote class="blockquote">
                                             <small>
-                                                We found this site to help people to find their exact
-                                                match to date and fill their life with joy!
+                                                Welcome to KOODE
                                             </small>
                                             <footer class="blockquote-footer mt-2">Adithyan & Bhavana</footer>
                                         </blockquote>

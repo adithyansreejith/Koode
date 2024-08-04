@@ -79,18 +79,14 @@ if (isset($_POST['Submit'])) {
 </head>
 <body>
 <div>
-    <?php
-    include("./includes/nav-bar.php")
-    ?>
+    <?php include("./includes/nav-bar.php") ?>
 
-    <div class="row" >
+    <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12" style="border-radius: 20px; overflow: hidden;">
-
             <div class="col-lg-10 col-xl-9 mx-auto" style="border-radius: 20px; overflow: hidden;">
                 <div class="row mt-5">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <?php
-                        // if any errors are there display them
                         if (count($errors) > 0) {
                             ?>
                             <div class="alert alert-danger" role="alert">
@@ -107,20 +103,14 @@ if (isset($_POST['Submit'])) {
                             <div class="alert alert-success" role="alert">
                                 <p>Registered Successfully. Click <a href="./login.php">here</a> to login.</p>
                             </div>
-                            <?php
-                        } ?>
+                        <?php } ?>
                     </div>
                 </div>
-                <div class="card card-signin flex-row " style="border-radius: 20px; overflow: hidden; border:1px solid red;">
-
-                <div class="card-img-left d-none d-md-flex" style="
-       
-        background-image: url('/datingSite/images/site_images/REGISTER2.svg');
-        background-size: cover;
-        background-position: center;
-        
-    ">
-                        
+                <div class="card card-signin flex-row" style="border-radius: 20px; overflow: hidden; border:1px solid red;">
+                    <div class="card-img-left d-none d-md-flex" style="
+                        background-image: url('/datingSite/images/site_images/REGISTER2.svg');
+                        background-size: cover;
+                        background-position: center;">
                     </div>
                     <div class="card-body" style="border-radius: 20px; overflow: hidden;">
                         <h5 class="card-title text-center">Register</h5>
@@ -162,13 +152,13 @@ if (isset($_POST['Submit'])) {
                                 <label for="inputCity">City</label>
                             </div>
                             <div class="form-label-group">
-                                <input type="text" name="hobby" id="Hobby" class="form-control"
+                                <input type="text" name="hobby" id="inputHobby" class="form-control"
                                        placeholder="Hobbies" style="border-radius: 20px; overflow: hidden;">
                                 <label for="inputHobby">Hobbies</label>
                             </div>
                             <div class="form-label-group">
-                                <input type="text" name="Job" id="Job" class="form-control"
-                                       placeholder="Job" required style="border-radius: 20px; overflow: hidden;">
+                                <input type="text" name="job" id="inputJob" class="form-control"
+                                       placeholder="Occupation" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="inputJob">Occupation</label>
                             </div>
                             <div class="form-label-group">
@@ -176,52 +166,48 @@ if (isset($_POST['Submit'])) {
                                 <label for="birthDate">Birth Date</label>
                             </div>
                             
-
                             <div class="form-group">
-
                                 <div class="form-check form-check-inline">
                                     Gender:&nbsp;
-                                    <input class="form-check-input" type="radio" name="gender" id="gender"
+                                    <input class="form-check-input" type="radio" name="gender" id="genderMale"
                                            value="male" checked required>
-                                    <label class="form-check-label" for="male">Male</label>
+                                    <label class="form-check-label" for="genderMale">Male</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" id="gender"
+                                    <input class="form-check-input" type="radio" name="gender" id="genderFemale"
                                            value="female" required>
-                                    <label class="form-check-label" for="female">Female</label>
+                                    <label class="form-check-label" for="genderFemale">Female</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" id="gender"
-                                           value="female" required>
-                                    <label class="form-check-label" for="other">Other</label>
+                                    <input class="form-check-input" type="radio" name="gender" id="genderOther"
+                                           value="other" required>
+                                    <label class="form-check-label" for="genderOther">Other</label>
                                 </div>
                             </div>
                             <hr>
                             <div class="form-group">
-
                                 <div class="form-check form-check-inline">
                                     Are you disabled?&nbsp;
-                                    <input class="form-check-input" type="radio" name="Disabled_stats" id="Yes"
+                                    <input class="form-check-input" type="radio" name="disabledStats" id="disabledYes"
                                            value="Y" checked required>
-                                    <label class="form-check-label" for="Yes">Yes</label>
+                                    <label class="form-check-label" for="disabledYes">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="Disabled_stats" id="No"
+                                    <input class="form-check-input" type="radio" name="disabledStats" id="disabledNo"
                                            value="N" required>
-                                    <label class="form-check-label" for="female">No</label>
+                                    <label class="form-check-label" for="disabledNo">No</label>
                                 </div>
-                    
                             </div>
                             <hr>
                             <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px; overflow: hidden;">
-                                If Yes, Choose Which
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Deaf</a>
-                                <a class="dropdown-item" href="#">Locomotive</a>
-                                <a class="dropdown-item" href="#">Mute</a>
-                            </div>
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px; overflow: hidden;">
+                                    If Yes, Choose Which
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Deaf</a>
+                                    <a class="dropdown-item" href="#">Locomotive</a>
+                                    <a class="dropdown-item" href="#">Mute</a>
+                                </div>
                             </div>
                             <hr>
                             <div class="input-group mb-3" style="border:1px solid blue; border-radius: 20px; overflow: hidden;">
@@ -256,14 +242,10 @@ if (isset($_POST['Submit'])) {
     </div>
 <hr>
 <hr>
-    <!-- footer -->
     <?php include("./includes/footer.php") ?>
-    <!-- end of footer -->
 </div>
 
-
 <script>
-
     function removePreview() {
         $('#img_preview').attr('src', "");
         $(".preview-img-container").css("display", "none");
@@ -273,14 +255,11 @@ if (isset($_POST['Submit'])) {
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
-
             reader.onload = function (e) {
                 $('#img_preview').attr('src', e.target.result);
                 $(".preview-img-container").css("display", "block");
             }
-
-            reader.readAsDataURL(input.files[0]); // convert to base64 string
-
+            reader.readAsDataURL(input.files[0]);
         }
     }
 

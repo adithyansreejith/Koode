@@ -89,6 +89,9 @@ if (isset($_SESSION["userId"])) {
                         <li class="nav-item">
                             <a class="nav-link" href="./register.php"><i class="fas fa-user-plus"></i>&nbsp;Sign Up</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./register2.php"><i class="fas fa-user-plus"></i>&nbsp;Sign Up2</a>
+                        </li>
                         <?php
                     }
                     ?>
