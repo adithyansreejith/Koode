@@ -115,7 +115,7 @@ if (isset($_POST['Submit'])) {
 
                 <div class="card-img-left d-none d-md-flex" style="
        
-        background-image: url('/datingSite/images/site_images/REGISTER.png');
+        background-image: url('/datingSite/images/site_images/REGISTER.svg');
         background-size: cover;
         background-position: center;
         
