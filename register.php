@@ -113,7 +113,13 @@ if (isset($_POST['Submit'])) {
                 </div>
                 <div class="card card-signin flex-row " style="border-radius: 20px; overflow: hidden; border:1px solid red;">
 
-                    <div class="card-img-left d-none d-md-flex">
+                <div class="card-img-left d-none d-md-flex" style="
+       
+        background-image: url('/datingSite/images/site_images/REGISTER.png');
+        background-size: cover;
+        background-position: center;
+        
+    ">
                         
                     </div>
                     <div class="card-body" style="border-radius: 20px; overflow: hidden;">
