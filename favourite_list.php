@@ -141,9 +141,9 @@ if (isset($_SESSION['userId'])) {
 
         </tbody>
     </table>
-    <!-- footer -->
+    <footer>
     <?php include("./includes/footer.php") ?>
-    <!-- end of footer -->
+    </footer>
 </div>
 </body>
 </html>

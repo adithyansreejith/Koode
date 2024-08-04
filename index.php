@@ -73,7 +73,7 @@ session_start();
                         </div>
                     </div>
 
-                </div>
+                  
             </section>
 
         </div>
@@ -183,9 +183,9 @@ session_start();
         </div>
     </div>
 
-    
+    <!-- footer -->
     <?php include("./includes/footer.php") ?>
-    
+    <!-- end of footer -->
 </div>
 
 </body>
