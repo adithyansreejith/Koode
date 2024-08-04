@@ -65,11 +65,13 @@ if (isset($_SESSION["userId"])) {
                                 <i class="fas fa-bars"></i> <!-- Hamburger Icon -->
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="./edit-profile.php">Edit Profile</a></li>
+                                
                                 <li><a class="dropdown-item" href="./view-profiles.php">View Profiles</a></li>
                                 <li><a class="dropdown-item" href="./favourite_list.php">Favourite List</a></li>
                                 <li><a class="dropdown-item" href="./chat-users.php?id=<?= $userId ?>">Inbox</a></li>
-                                <li><a class="dropdown-item" href="./logout.php">Logout</a></li>
+                                <li><a class="dropdown-item" href="./edit-profile.php">Edit Profile</a></li>
+                                <li><a class="dropdown-item" href=""></a></li>
+                                <li style="border: radius 0.5rem; background-color:red;"><a class="dropdown-item" href="./logout.php" style="color:white;">Logout</a></li>
                             </ul>
                         </li>
                         <?php
