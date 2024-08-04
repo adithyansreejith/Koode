@@ -14,8 +14,6 @@ if (isset($_SESSION["userId"])) {
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome CSS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
@@ -31,7 +29,9 @@ if (isset($_SESSION["userId"])) {
         .dropdown-item {
             color: red;
         }
-        
+        .nav-link.dropdown-toggle i {
+            color: white;
+        }
             
     </style>
 </head>
@@ -39,7 +39,7 @@ if (isset($_SESSION["userId"])) {
     <header>
         <nav class="navbar navbar-dark bg-danger navbar-expand-sm">
             <a class="navbar-brand" href="./index.php">
-                KOODE <span class="text-warning">With You</span>
+               &nbsp; KOODE <span class="text-warning">With You</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-list-2"
                     aria-controls="navbar-list-2" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,7 +86,7 @@ if (isset($_SESSION["userId"])) {
                     }
                     ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="./index.php">Home</a>
+                        <a class="nav-link" href="./index.php">Home&nbsp;</a>
                     </li>
                 </ul>
             </div>
