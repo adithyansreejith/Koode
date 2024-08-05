@@ -171,6 +171,7 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
     <?php include("./includes/header.php") ?>
     <link href="./css/style.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"><!-- awesome fonts -->
+    
     <title>View Profiles</title>
     <style>
         .card-img-top {
@@ -368,25 +369,75 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                         </ul>
                         <div class="card-body">
                         <!-- Buttons for all users -->
-                        <div class="row mb-10">
-                            <div class="col-md-12 col-sm-12">
-                                <button class="btn btn-success w-100" data-toggle="modal" data-target="#loginModal" style="border-radius: 25px; overflow: hidden;">
-                                     Send Message&nbsp;<i class="fas fa-comment"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                                <button class="btn btn-info w-100" data-toggle="modal" data-target="#loginModal" style="border-radius: 25px; overflow: hidden;">
-                                    Like&nbsp;<i class="fas fa-thumbs-up"></i>
-                                </button>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <button class="btn btn-danger w-100" data-toggle="modal" data-target="#loginModal" style="border-radius: 25px; overflow: hidden;">
-                                    Favourite<i class="fas fa-heart"></i>
-                                </button>
-                            </div>
-                        </div>
+                        <?php
+                            if ($userId === 0) {
+                                ?>
+                                <div class="row mb-10">
+                                    <div class="col-md-12 col-sm-12">
+                                        <button class="btn btn-success w-100" data-toggle="modal"
+                                                data-target="#loginModal" style="border-radius: 25px; overflow: hidden;">
+                                            Send Message
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-md-6 col-sm-12">
+                                        <button class="btn btn-info w-100" data-toggle="modal"
+                                                data-target="#loginModal" style="border-radius: 25px; overflow: hidden;">
+                                            Like
+                                        </button>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <button class="btn btn-danger w-100" data-toggle="modal"
+                                                data-target="#loginModal" style="border-radius: 25px; overflow: hidden;">
+                                            Favourite
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <?php
+                            } else {
+                                ?>
+                                <div class="row mb-10">
+                                    <div class="col-md-12 col-sm-12">
+                                        <a href="./chat-users.php?id=<?= $profile["id"] ?>"
+                                           class="btn btn-success w-100" style="border-radius: 25px; overflow: hidden;">
+                                            Send Message
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <a href="./view-profiles.php?sendWinkTo=<?= $profile["id"] ?>"
+                                           name="SendWink" class="btn btn-info w-100" style="border-radius: 25px; overflow: hidden;">Like</a>
+
+                                    </div>
+
+
+                                    <div class="col-md-6 col-sm-12">
+                                        <?php
+                                        if ($userObj["user_role"] === "regular") {
+                                            ?>
+                                            <button class="btn btn-danger w-100" data-toggle="modal"
+                                                    data-target="#addToFavouriteModal" style="border-radius: 25px; overflow: hidden;">
+                                                Favourite
+                                            </button>
+
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <a class="btn btn-danger w-100"
+                                               href="./view-profiles.php?addToFavouriteId=<?= $profile["id"] ?>" style="border-radius: 25px; overflow: hidden;">
+                                                Favourite
+                                            </a>
+                                            <?php
+                                        } ?>
+                                    </div>
+                                </div>
+                                <?php
+                            }
+                            ?>
                     </div>
 
                 </div>
