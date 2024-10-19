@@ -4,10 +4,12 @@ require_once("./Connector/DbConnectorPDO.php");
 include("./helper/helperFunctions.php");
 $connection = getConnection();
 $userId = isset($_SESSION["userId"]) && !empty($_SESSION["userId"]) ? $_SESSION["userId"] : 0;
+
 if ($userId !== 0) {
     header("Location: ./index.php");
     exit(); // Add exit() to stop executing the script
 }
+
 $errors = array();
 if (isset($_POST['Submit'])) {
     $email = $_POST['email'];
@@ -23,18 +25,25 @@ if (isset($_POST['Submit'])) {
             $count = $stmt->rowCount();
             $row   = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            if($count === 0) {
+            if ($count === 0) {
                 array_push($errors, 'Incorrect Username / Password');
-            }else{
+            } else {
                 $_SESSION['userId'] = $row['id'];
                 $_SESSION['user'] = $row;
-                header("Location: index.php");
-                exit(); // Add exit() to stop executing the script
+
+                // Redirect based on user ID
+                if ($_POST['email'] == 'admin@koode.com') {
+                    header("Location: admin.php");
+                } else {
+                    header("Location: index.php");
+                }
+                exit(); 
             }
         }
     }
 }
 ?>
+
 
 <!doctype html>
 <html lang="en">
