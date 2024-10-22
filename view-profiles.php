@@ -408,12 +408,16 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                             } else {
                                 ?>
                                 <div class="row mb-10">
-                                    <div class="col-md-12 col-sm-12">
-                                        <a href="./chat-users.php?id=<?= $profile["id"] ?>"
-                                           class="btn btn-success w-100" style="border-radius: 25px; overflow: hidden;">
-                                            Send Message
-                                        </a>
-                                    </div>
+                                <div class="col-md-12 col-sm-12">
+                                <?php 
+                                $buttonClass = ($profile["disabled_status"] === 'Y') ? 'btn-warning' : 'btn-danger'; 
+                                ?>
+                                <a href="./chat-users.php?id=<?= $profile["id"] ?>"
+                                class="btn <?= $buttonClass ?> w-100" style="border-radius: 25px; overflow: hidden;">
+                                    Send Message
+                                </a>
+                            </div>
+
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 col-sm-12">
