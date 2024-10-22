@@ -111,6 +111,7 @@ if ($result->num_rows > 0) {
             <p class="profile-field"><strong>Gender:</strong> <?php echo $user['gender']; ?></p>
             <p class="profile-field"><strong>Hobby:</strong> <?php echo $user['hobby']; ?></p>
             <p class="profile-field"><strong>Job:</strong> <?php echo $user['Job']; ?></p>
+            <p class="profile-field"><strong>Disabled:</strong> <?php echo $user['disabled_status']; ?></p>
             <!--<p class="profile-field"><strong>Image URL:</strong> <?php echo $user['imgUrl']; ?></p>
             <p class="profile-field"><strong>Created Date:</strong> <?php echo $user['created_date']; ?></p>-->
         </div>

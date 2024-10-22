@@ -24,7 +24,8 @@ if (isset($_POST['Submit'])) {
     $gender = $_POST["gender"];
     $hobby = $_POST["hobby"];
     $Job = $_POST["Job"];
-    
+    $disabledStats=$_POST["disabledStats"];
+
     
     
 
@@ -51,7 +52,7 @@ if (isset($_POST['Submit'])) {
                     move_uploaded_file($file_tmp, $imageURL);
                     $image_uploaded = true;
                     try {
-                        $insertQueryForRegister = "INSERT INTO datingdb.profile(email,password,firstName,lastName,bio,city,birthDate,gender,hobby,Job,imgUrl,user_role) values('$email','$password','$firstName','$lastName','$bio','$city','$dateOfBirth','$gender','$hobby','$Job','$imageURL','premium')";
+                        $insertQueryForRegister = "INSERT INTO datingdb.profile(email,password,firstName,lastName,bio,city,birthDate,gender,hobby,Job,imgUrl,,disabled_status,user_role) values('$email','$password','$firstName','$lastName','$bio','$city','$dateOfBirth','$gender','$hobby','$Job','$imageURL','$disabledStats','premium')";
                         $insertQueryForRegisterstmt = $connection->prepare($insertQueryForRegister);
                         $insertQueryForRegisterstmt->execute();
                         $registerSuccessfully = true;
@@ -193,29 +194,46 @@ if (isset($_POST['Submit'])) {
                             </div>
                             <hr>
                             <div class="form-group">
-                                <div class="form-check form-check-inline">
-                                    Are you disabled?&nbsp;
-                                    <input class="form-check-input" type="radio" name="disabledStats" id="disabledYes"
-                                           value="Y" checked required>
-                                    <label class="form-check-label" for="disabledYes">Yes</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="disabledStats" id="disabledNo"
-                                           value="N" required>
-                                    <label class="form-check-label" for="disabledNo">No</label>
-                                </div>
+                            <div class="form-check form-check-inline">
+                                Are you disabled?&nbsp;
+                                <input class="form-check-input" type="radio" name="disabledStats" id="disabledYes" value="Y" required onclick="toggleDisabilityDropdown(true)">
+                                <label class="form-check-label" for="disabledYes">Yes</label>
                             </div>
-                            <hr>
-                            <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px; overflow: hidden;">
-                                    If Yes, Choose Which
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Deaf</a>
-                                    <a class="dropdown-item" href="#">Locomotive</a>
-                                    <a class="dropdown-item" href="#">Mute</a>
-                                </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="disabledStats" id="disabledNo" value="N" required onclick="toggleDisabilityDropdown(false)">
+                                <label class="form-check-label" for="disabledNo">No</label>
                             </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- Disability Dropdown (Initially Disabled) -->
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px; overflow: hidden;" disabled>
+                                If Yes, Choose Which
+                            </button>
+                            <input type="hidden" id="disabilityType" name="disabilityType" value=""> <!-- Hidden input to capture value -->
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#" onclick="selectDisabilityType('Deaf')">Deaf</a>
+                                <a class="dropdown-item" href="#" onclick="selectDisabilityType('Locomotive')">Locomotive</a>
+                                <a class="dropdown-item" href="#" onclick="selectDisabilityType('Mute')">Mute</a>
+                            </div>
+                        </div>
+
+                        <script>
+                            // Function to toggle the disability dropdown
+                            function toggleDisabilityDropdown(isEnabled) {
+                                document.getElementById('dropdownMenuButton').disabled = !isEnabled;
+                                if (!isEnabled) {
+                                    document.getElementById('disabilityType').value = ""; // Clear value if "No" is selected
+                                }
+                            }
+
+                            // Function to capture the selected disability type
+                            function selectDisabilityType(type) {
+                                document.getElementById('disabilityType').value = type;
+                            }
+                        </script>
                             <hr>
                             <div class="input-group mb-3" style="border:1px solid blue; border-radius: 20px; overflow: hidden;">
                                 <div class="custom-file">
