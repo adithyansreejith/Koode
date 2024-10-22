@@ -108,7 +108,7 @@ if (isset($_POST['Submit'])) {
                 </div>
                 <div class="card card-signin flex-row" style="border-radius: 20px; overflow: hidden; border:1px solid red;">
                     <div class="card-img-left d-none d-md-flex" style="
-                        background-image: url('/datingSite/images/site_images/REGISTER2.svg');
+                        background-image: url('images/site_images/REGISTER2.svg');
                         background-size: cover;
                         background-position: center;">
                     </div>
@@ -157,7 +157,7 @@ if (isset($_POST['Submit'])) {
                                 <label for="inputHobby">Hobbies</label>
                             </div>
                             <div class="form-label-group">
-                                <input type="text" name="job" id="inputJob" class="form-control"
+                                <input type="text" name="Job" id="inputJob" class="form-control"
                                        placeholder="Occupation" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="inputJob">Occupation</label>
                             </div>
