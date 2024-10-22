@@ -16,6 +16,7 @@ if (isset($_POST['Submit'])) {
     $email = $_POST['email'];
     $firstName = $_POST["firstName"];
     $lastName = $_POST["lastName"];
+    $bio = $_POST["bio"];
     $password = $_POST["password"];
     $confirmpassword = $_POST['confirmpassword'];
     $city = $_POST['city'];
@@ -23,6 +24,7 @@ if (isset($_POST['Submit'])) {
     $gender = $_POST["gender"];
     $hobby = $_POST["hobby"];
     $Job = $_POST["Job"];
+    
     
     
 
@@ -49,7 +51,7 @@ if (isset($_POST['Submit'])) {
                     move_uploaded_file($file_tmp, $imageURL);
                     $image_uploaded = true;
                     try {
-                        $insertQueryForRegister = "INSERT INTO datingdb.profile(email,password,firstName,lastName,city,birthDate,gender,imgUrl,user_role) values('$email','$password','$firstName','$lastName','$city','$dateOfBirth','$gender','$imageURL','premium')";
+                        $insertQueryForRegister = "INSERT INTO datingdb.profile(email,password,firstName,lastName,bio,city,birthDate,gender,hobby,Job,imgUrl,user_role) values('$email','$password','$firstName','$lastName','$bio','$city','$dateOfBirth','$gender','$hobby','$Job','$imageURL','premium')";
                         $insertQueryForRegisterstmt = $connection->prepare($insertQueryForRegister);
                         $insertQueryForRegisterstmt->execute();
                         $registerSuccessfully = true;
@@ -132,6 +134,11 @@ if (isset($_POST['Submit'])) {
                                        placeholder="Last Name" required style="border-radius: 20px; overflow: hidden;">
                                 <label for="lastName">Last Name</label>
                             </div>
+                            <div class="form-label-group">
+                                <textarea id="bio" name="bio" class="form-control" placeholder="" required style="border-radius: 20px; overflow: hidden;"></textarea>
+                                <label for="bio">Bio</label>
+                            </div>
+
                             <hr>
 
                             <div class="form-label-group">
