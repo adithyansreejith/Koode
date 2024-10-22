@@ -18,7 +18,7 @@ $userObj = $userId !== 0 && !IsVariableIsSetOrEmpty($_SESSION["user"]) ? $_SESSI
 
 $isSearchCriteria = false;
 $firstName = "";
-$city = "";
+$disabled_status = "";
 $gender = "";
 $ageToSearch = "18";
 $isWinkSent = false;
@@ -33,7 +33,7 @@ if (isset($_POST["Search"]) && !IsVariableIsSetOrEmpty($_POST["Search"])) {
 
     $searchCount = 0;
     $firstName = $_POST["firstName"];
-    $city = $_POST["city"];
+    $disabled_status = $_POST["disabled_status"];
     $gender = $_POST["gender"];
     $ageToSearch = $_POST["age"];
     $searchQuery = "";
@@ -42,11 +42,11 @@ if (isset($_POST["Search"]) && !IsVariableIsSetOrEmpty($_POST["Search"])) {
         $searchQuery .= " firstName like :firstName";
         $searchCount++;
     }
-    if (!IsVariableIsSetOrEmpty($city)) {
+    if (!IsVariableIsSetOrEmpty($disabled_status)) {
         if ($searchCount > 0) {
             $searchQuery .= " and ";
         }
-        $searchQuery .= " city like :city";
+        $searchQuery .= " disabled_status like :disabled_status";
         $searchCount++;
     }
     if (!IsVariableIsSetOrEmpty($gender)) {
@@ -89,9 +89,9 @@ if ($isSearchCriteria === true) {
         $newFirstNameString = "%{$firstName}%";
         $profileListStmt->bindParam(':firstName', $newFirstNameString, PDO::PARAM_STR);
     }
-    if (!empty($city)) {
-        $newCityString = "%{$city}%";
-        $profileListStmt->bindParam(':city', $newCityString, PDO::PARAM_STR);
+    if (!empty($disabled_status)) {
+        $newCityString = "%{$disabled_status}%";
+        $profileListStmt->bindParam(':disabled_status', $newCityString, PDO::PARAM_STR);
     }
     if (!empty($gender)) {
         $profileListStmt->bindParam(':gender', $gender, PDO::PARAM_STR);
@@ -255,9 +255,9 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                         </div>
                         <div class="col" style="margin-left:auto; margin-right: auto;">
                             <div class="form-group">
-                                <label for="lastName">Search by city</label>
-                                <input name="city" id="city" type="text" class="form-control"
-                                       placeholder="City" value="<?= $city ?>" style="border-radius: 20px; overflow: hidden; border:2px solid red;">
+                                <label for="lastName">Search for Differently abled</label>
+                                <input name="disabled_status" id="disabled_status" type="text" class="form-control"
+                                       placeholder="Y or N" value="<?= $disabled_status ?>" style="border-radius: 20px; overflow: hidden; border:2px solid red;">
                             </div>
                         </div>
                     </div>
@@ -327,6 +327,9 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
         if (count($profileList) > 0) {
             $counter = 0;
             foreach ($profileList as $profile) {
+                if ($profile['email'] == 'admin@koode.com') {
+                    continue; // Skip the iteration if the email is admin@koode.com
+                }
                 $counter++;
                 if ($counter === 1) {
                     echo '<div class="row mb-10">';
@@ -346,15 +349,20 @@ if (isset($_GET['addToFavouriteId']) && $userObj["user_role"] === "premium") {
                         </div>
                         <ul class="list-group list-group-flush">
                         <li class="list-group-item">DoB: <?= $profile["birthDate"] ?></li>
-                            <li class="list-group-item">Age: <?php
-                                try {
-                                    $birthDay = new DateTime($profile["birthDate"]);
-                                    $today = new Datetime(date('y-d-m'));
-                                    $diff = $today->diff($birthDay);
-                                    echo "$diff->y years";
-                                } catch (Exception $e) {
-                                } // Your date of birth
-                                ?></li>
+                        <li class="list-group-item">Age: 
+                            <?php
+                            try {
+                                $birthDay = new DateTime($profile["birthDate"]);
+                                $today = new DateTime(date('Y-m-d'));
+                                $diff = $today->diff($birthDay);
+                                echo $diff->y . " years";
+                            } catch (Exception $e) {
+                                echo "N/A";
+                            }
+                            ?>
+                        </li>
+
+                                <li class="list-group-item">Disabled: <?= $profile["disabled_status"] ?></li>
                             <li class="list-group-item">Location: <?= $profile["city"] ?></li>
                             <li class="list-group-item">
                                 Gender:
