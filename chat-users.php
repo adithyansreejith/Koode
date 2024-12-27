@@ -183,7 +183,7 @@ WHERE (msg_from_user_id =:userId and msg_to_user_id=:sentToUserID) or (msg_from_
             display: inline-block;
             text-align: right;
             width: 60%;
-            padding:
+            padding:10px;
         }
 
         .headind_srch {
@@ -328,7 +328,7 @@ WHERE (msg_from_user_id =:userId and msg_to_user_id=:sentToUserID) or (msg_from_
         .outgoing_msg_img {
             display: inline-block;
             width: 6%;
-            float: right;
+            
         }
 
         .outgoing_msg_img img, .incoming_msg_img img {
